@@ -16,7 +16,7 @@ from pathlib import Path
 
 with st.sidebar:
     # st.button("RUN", on_click=rand_gen())
-    st.button("STOP", on_click=st.stop())
+    st.sidebar.button("STOP")
 
 
 col1, col2 = st.columns(2)
