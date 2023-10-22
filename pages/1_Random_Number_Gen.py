@@ -14,7 +14,7 @@ def rand_control(cVal):
     file_str = f"{str(Path.cwd())}/config.json"
 
     with open(file_str, "r") as fileObj:
-        tempData =  fileObj.read()
+        tempData =  dict(fileObj.read())
 
     tempData["rand_button"] = control_val
 
@@ -31,7 +31,7 @@ def rand_state():
     file_str = f"{str(Path.cwd())}/config.json"
 
     with open(file_str, "r") as fileObj:
-        tempData =  fileObj.read()
+        tempData =  dict(fileObj.read())
 
     return tempData["rand_button"]
 
