@@ -11,12 +11,9 @@ with st.sidebar:
 
     st.button("OFF", type="primary", use_container_width=True)
 
-    if st.button('OFF', use_container_width=True):
+    if not st.button('ON', use_container_width=True):
         rand_gen = True
     else:
-        rand_gen = False
-
-    if rand_gen:
 
         for count in range(1, 50):
             time.sleep(.5)
