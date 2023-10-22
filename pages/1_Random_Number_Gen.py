@@ -7,8 +7,6 @@ import json
 from pathlib import Path
 
 
-
-
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -20,15 +18,14 @@ with col2:
 with col3:
     gauge(random(), gSize="SML")
 
+with st.sidebar:
+
+    run_app = st.rerun()
+    stop_app = st.stop()
+
+    st.button("STOP", use_container_width=True, on_click=run_app)
+    st.button("RUN", use_container_width=True, on_click=stop_app)
 
 for count in range(1, 20):
     time.sleep(.5)
     st.rerun()
-
-with st.sidebar:
-
-    st.button("STOP", type="primary", use_container_width=True)
-    if st.button("RUN", use_container_width=True):
-        st.rerun()
-    else:
-        st.stop()
