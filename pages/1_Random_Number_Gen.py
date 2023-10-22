@@ -4,10 +4,16 @@ from streamViz import gauge
 from random import random
 import time
 
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
+
+def addSB():
+
+    add_selectbox = st.sidebar.selectbox(
+        "How would you like to be contacted?",
+        ("Email", "Home phone", "Mobile phone")
+    )
+    return add_selectbox
+
+st.sidebar.button("Reset", type="primary", callback=add_selectbox)
 
 
 with st.container():
@@ -26,3 +32,5 @@ with st.container():
     for count in range(1, 50):
         time.sleep(.5)
         st.rerun()
+
+
