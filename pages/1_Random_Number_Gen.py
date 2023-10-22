@@ -13,7 +13,7 @@ def addSB():
     )
     return add_selectbox
 
-st.sidebar.button("Reset", type="primary", callback=add_selectbox)
+st.sidebar.button("Reset", type="primary", callback=addSB)
 
 
 with st.container():
