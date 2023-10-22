@@ -15,7 +15,7 @@ with col1:
 with col2:
     gauge(random(), gSize="MED", gMode="number")
 
-with col2:
+with col3:
     gauge(random(), gSize="MED", sFix="%")
 
 
