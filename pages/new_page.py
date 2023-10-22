@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 import streamlit as st
 from easyGauge import easy_gauge
-import random
+from random import random
 import time
 
 
