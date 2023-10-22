@@ -17,12 +17,12 @@ with col2:
 
 with st.sidebar:
 
-    st.button("STOP", type="primary")
+    # st.button("RUN", type="primary")
 
-    if st.button("RUN"):
-        for count in range(1, 20):
-            time.sleep(1)
-
-            st.rerun()
-    else:
-        st.stop()
+    if st.button("STOP"):
+          st.stop()
+    # else:
+for count in range(1, 20):
+    time.sleep(.5)
+    st.rerun()
+        
