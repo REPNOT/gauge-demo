@@ -10,5 +10,5 @@ import time
 easy_gauge(random())
 
 for count in range(1, 50):
-    time.sleep(3)
+    time.sleep(.5)
     st.rerun()
