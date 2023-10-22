@@ -7,9 +7,7 @@ import json
 from pathlib import Path
 
 
-for count in range(1, 20):
-    time.sleep(.5)
-    st.rerun()
+
 
 col1, col2, col3 = st.columns(3)
 
@@ -22,6 +20,10 @@ with col2:
 with col3:
     gauge(random(), gSize="SML")
 
+
+for count in range(1, 20):
+    time.sleep(.5)
+    st.rerun()
 
 with st.sidebar:
 
