@@ -36,8 +36,8 @@ def rand_state():
     return tempData["rand_button"]
 
 with st.sidebar:
-    st.button("On", type="primary", on_click=rand_control("true"), use_container_width=True)
-    st.button("Off", type="primary", on_click=rand_control("false"), use_container_width=True)
+    on_button = st.button("On", type="primary", on_click=rand_control("true"), use_container_width=True)
+    off_button = st.button("Off", type="primary", on_click=rand_control("false"), use_container_width=True)
 
 rand_gen = rand_state()
 
