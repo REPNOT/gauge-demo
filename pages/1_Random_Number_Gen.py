@@ -16,12 +16,12 @@ with col2:
     gauge(random(), gSize="SML")
 
 
-col1, col2 = st.columns(2)
+col3, col4 = st.columns(2)
 
-with col1:
+with col3:
     gauge(random(), gSize="LRG", gMode="number", sFix="%")
 
-with col2:
+with col4:
     gauge(random(), gSize="SML", gMode="number")
 
 
