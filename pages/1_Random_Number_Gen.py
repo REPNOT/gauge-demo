@@ -10,13 +10,13 @@ from pathlib import Path
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    gauge(random(), gSize="SML")
+    gauge(random(), gSize="MED")
 
 with col2:
     gauge(random(), gSize="LRG")
 
 with col3:
-    gauge(random(), gSize="SML")
+    gauge(random(), gSize="MED")
 
 
 with st.sidebar:
