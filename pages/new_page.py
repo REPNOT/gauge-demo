@@ -13,4 +13,4 @@ def get_rand():
 
     return random()
 
-easy_gauge(get_rand() for count in range(50))
+easy_gauge(float(get_rand() for count in range(50)))
