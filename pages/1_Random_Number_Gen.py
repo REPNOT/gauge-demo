@@ -18,9 +18,9 @@ with col2:
 with col3:
     gauge(random(), gSize="SML")
 
-st.button("RUN", type="primary")
-if st.button('STOP', type="primary"):
-    st.run()
+st.button("STOP", type="primary", use_container_width=True)
+if st.button('RUN', type="primary", use_container_width=True):
+    st.rerun()
 else:
     st.stop()
 
