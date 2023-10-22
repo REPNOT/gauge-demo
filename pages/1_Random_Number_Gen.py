@@ -7,17 +7,11 @@ import json
 from pathlib import Path
 
 
-with st.sidebar:
+def rand_gen():
 
-    st.button("OFF", type="primary", use_container_width=True)
-
-    if not st.button('ON', use_container_width=True):
-        rand_gen = True
-    else:
-
-        for count in range(1, 50):
-            time.sleep(.5)
-            st.rerun()
+    for count in range(1, 10):
+        time.sleep(.5)
+        st.rerun()
 
 col1, col2 = st.columns(2)
 
@@ -26,3 +20,5 @@ with col1:
 
 with col2:
     gauge(random(), gSize="LRG")
+
+st.sidebar.button("RUN", on_click=True)
