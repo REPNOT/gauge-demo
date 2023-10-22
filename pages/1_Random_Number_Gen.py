@@ -7,6 +7,13 @@ import json
 from pathlib import Path
 
 
+st.set_page_config(
+      page_title="Indicator Gauge",
+      page_icon=":chart:",
+      layout="wide",
+      initial_sidebar_state="expanded"
+  )
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
