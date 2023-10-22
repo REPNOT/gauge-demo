@@ -21,4 +21,4 @@ with col1:
 with col2:
     gauge(random(), gSize="LRG")
 
-st.sidebar.button("RUN", on_click=True)
+st.sidebar.button("RUN", on_click=rand_gen())
