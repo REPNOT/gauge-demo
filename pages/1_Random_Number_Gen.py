@@ -35,8 +35,9 @@ def rand_state():
 
     return tempData["rand_button"]
 
-st.sidebar.button("On", type="primary", on_click=rand_control("true"))
-st.sidebar.button("Off", type="primary", on_click=rand_control("false"))
+with st.sidebar:
+    st.button("On", type="primary", on_click=rand_control("true"), use_container_width=True)
+    st.button("Off", type="primary", on_click=rand_control("false"), use_container_width=True)
 
 rand_gen = rand_state()
 
@@ -48,12 +49,15 @@ with col1:
 with col2:
     gauge(random(), gSize="LRG")
 
+if rand_gen == "false":
+    run_rand = False
+else:
+    run_rand = True
 
+if rand_gen:
 
-
-
-for count in range(1, 50):
-    time.sleep(.5)
-    st.rerun()
+    for count in range(1, 50):
+        time.sleep(.5)
+        st.rerun()
 
 
