@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from streamlit.hello.utils import show_code
 
-def easy_gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
+displayCode = """def easy_gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
                     grLow=.29, grMid=.69, gcLow='#FF1708', gcMid='#FF9400', 
                     gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
                     arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
@@ -60,8 +60,6 @@ def easy_gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
         use_container_width=cWidth, 
         theme=pTheme, 
         **{'config':config}
-    )
+    )"""
 
-
-
-show_code(easy_gauge)
+st.code(displayCode)
