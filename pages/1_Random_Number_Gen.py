@@ -21,10 +21,11 @@ with col3:
 
 with st.sidebar:
 
-    if st.button("STOP", use_container_width=True):
-        st.stop()
+    st.button("STOP", type="primary", use_container_width=True)
     if st.button("RUN", use_container_width=True):
         st.rerun()
+    else:
+        st.stop()
     
 for count in range(1, 20):
     time.sleep(.5)
