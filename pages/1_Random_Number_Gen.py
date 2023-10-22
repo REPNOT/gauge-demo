@@ -35,10 +35,7 @@ def rand_state():
 
     return tempData["rand_button"]
 
-st.button("On", type="primary", on_click=rand_control("true"), use_container_width=True)
-st.button("Off", type="secondary", on_click=rand_control("false"), use_container_width=True)
 
-rand_gen = rand_state()
 
 col1, col2 = st.columns(3)
 
@@ -47,6 +44,12 @@ with col1:
 
 with col2:
     gauge(random(), gSize="LRG")
+
+st.button("On", type="primary", on_click=rand_control("true"), use_container_width=True)
+st.button("Off", type="secondary", on_click=rand_control("false"), use_container_width=True)
+
+rand_gen = rand_state()
+
 
 if rand_gen == "false":
     run_rand = False
