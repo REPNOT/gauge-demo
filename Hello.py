@@ -27,7 +27,7 @@ def run():
       initial_sidebar_state="expanded",
       menu_items={
           'Get Help': 'https://techbyderek.com',
-          'GitHub Repo': "https://www.extremelycoolapp.com/bug",
+          'Report a Bug': "https://github.com/REPNOT/gauge-demo",
           'About': "A Streamlit demonstration app for Plotly indicator gauge charts."
       }
   )
