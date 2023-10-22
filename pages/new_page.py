@@ -9,6 +9,8 @@ def get_rand():
 
     time.sleep(3)
 
+    randVal = float(random())
+
     return random()
 
 easy_gauge(get_rand() for count in range(50))
