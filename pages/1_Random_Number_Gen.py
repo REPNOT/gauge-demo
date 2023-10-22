@@ -3,6 +3,7 @@ import streamlit as st
 from easyGauge import easy_gauge
 from random import random
 import time
+from streamlit.hello.utils import show_code
 
 
 easy_gauge(random())
