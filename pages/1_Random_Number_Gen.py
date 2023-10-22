@@ -19,8 +19,10 @@ with col3:
     gauge(random(), gSize="SML")
 
 
-if st.button('RUN', type="primary", use_container_width=True):
-    st.stop()
+with st.sidebar:
+
+    if st.button('STOP', type="primary", use_container_width=True):
+        st.stop()
 
 for count in range(1, 20):
     time.sleep(.5)
