@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 import streamlit as st
 
-def easyGauge(gVal, gTitle="", gMode='streamGauge+number', gSize="MED",
+def easy_guage(gVal, gTitle="", gMode='streamGauge+number', gSize="MED",
                     grLow=.30, grMid=.70, gcLow='#FF1708', gcMid='#FF9400', 
                     gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
                     arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
