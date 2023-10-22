@@ -19,10 +19,10 @@ with col2:
 col1, col2 = st.columns(2)
 
 with col1:
-    gauge(random(), gSize="LRG", gType="number", sFix="%")
+    gauge(random(), gSize="LRG", gMode="number", sFix="%")
 
 with col2:
-    gauge(random(), gSize="SML", gType="number")
+    gauge(random(), gSize="SML", gMode="number")
 
 
 with st.sidebar:
