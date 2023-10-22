@@ -17,8 +17,15 @@ def rand_gen():
 
 
 with st.sidebar:
-    st.button("RUN", on_click=rand_gen())
-    st.button("STOP", on_click=st.stop())
+
+    st.button("STOP", type="primary")
+
+    if st.button("RUN"):
+        for count in range(1, 20):
+            time.sleep(1)
+            st.rerun()
+    else:
+        st.stop()
 
 
 col1, col2 = st.columns(2)
