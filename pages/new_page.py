@@ -4,4 +4,11 @@ from easyGauge import easy_gauge
 from random import random
 import time
 
-easy_gauge(random())
+
+def get_rand():
+
+    time.sleep(3)
+
+    return random()
+
+easy_gauge(get_rand() for count in range(50))
