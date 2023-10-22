@@ -13,6 +13,12 @@ from pathlib import Path
 #         time.sleep(.5)
 #         st.rerun()
 
+
+with st.sidebar:
+    # st.button("RUN", on_click=rand_gen())
+    st.button("STOP", on_click=st.stop())
+
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -21,6 +27,4 @@ with col1:
 with col2:
     gauge(random(), gSize="LRG")
 
-with st.sidebar:
-    # st.button("RUN", on_click=rand_gen())
-    st.button("STOP", on_click=st.stop())
+
