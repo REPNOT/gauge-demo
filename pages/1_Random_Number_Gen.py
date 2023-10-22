@@ -21,7 +21,7 @@ with col3:
 
 with st.sidebar:
 
-    if st.button("STOP", type="primary", use_container_width=True):
+    if st.button("STOP", use_container_width=True):
         st.stop()
     if st.button("RUN", use_container_width=True):
         st.rerun()
