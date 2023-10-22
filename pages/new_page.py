@@ -5,18 +5,10 @@ from random import random
 import time
 
 
-def get_rand(dNum):
 
-    numLst = []
 
-    for countVal in range(1, (dNum + 1)):
+easy_gauge(random())
 
-        time.sleep(3)
-
-        numLst.append(random())
-
-    return numLst
-
-easy_gauge(float())
-
-print(count for count in get_rand(50))
+for count in range(1, 50):
+    time.sleep(3)
+    st.rerun()
