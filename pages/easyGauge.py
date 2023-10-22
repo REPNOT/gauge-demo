@@ -64,4 +64,4 @@ def easy_gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
 
 
 
-show_code(easy_gauge())
+show_code(easy_gauge)
