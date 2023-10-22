@@ -13,7 +13,7 @@ with col1:
     gauge(random(), gSize="SML", sFix="%")
 
 with col2:
-    gauge(random(), gSize="LRG", gMode="number")
+    gauge(random(), gSize="LRG", gMode="number+gauge")
 
 with col3:
     gauge(random(), gSize="SML", sFix="%")
