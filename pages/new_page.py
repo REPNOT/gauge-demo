@@ -1,4 +1,4 @@
-import easyGauge
+from streamlit.hello.easyGauge import easyGauge
 
 
 easyGauge(.75)
