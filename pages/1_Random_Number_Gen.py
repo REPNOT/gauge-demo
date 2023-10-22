@@ -5,7 +5,17 @@ from random import random
 import time
 
 
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    gauge(random())
+
 gauge(random())
+
+import streamlit as st
+
+
+
 
 for count in range(1, 50):
     time.sleep(.5)
