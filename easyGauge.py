@@ -164,11 +164,9 @@ def easyGauge(gVal, gTitle="", gMode='streamGauge+number', gSize="MED",
 
     config = {'displayModeBar': False}
 
-    gaugePlot = st.plotly_chart(
+    st.plotly_chart(
         fig1, 
         use_container_width=cWidth, 
         theme=pTheme, 
         **{'config':config}
     )
-
-    return gaugePlot
