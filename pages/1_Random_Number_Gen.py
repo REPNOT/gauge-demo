@@ -5,8 +5,6 @@ from random import random
 import time
 
 
-
-
 easy_gauge(random())
 
 for count in range(1, 50):
