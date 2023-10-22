@@ -1,2 +1,3 @@
 streamlit
-python-plotly
+plotly
+plotly.graph_objects
