@@ -23,8 +23,6 @@ with col1:
 with col2:
     gauge(random(), gSize="LRG")
 
-st.sidebar.button()
-
 if rand_gen:
 
     for count in range(1, 50):
