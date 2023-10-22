@@ -7,16 +7,14 @@ import json
 from pathlib import Path
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    gauge(random(), gSize="SML")
+    gauge(random(), gSize="LRG")
 
 with col2:
     gauge(random(), gSize="MED")
 
-with col3:
-    gauge(random(), gSize="SML")
 
 
 with st.sidebar:
