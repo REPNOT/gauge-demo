@@ -7,6 +7,10 @@ import json
 from pathlib import Path
 
 
+for count in range(1, 20):
+    time.sleep(.5)
+    st.rerun()
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -26,8 +30,3 @@ with st.sidebar:
         st.rerun()
     else:
         st.stop()
-    
-for count in range(1, 20):
-    time.sleep(.5)
-    st.rerun()
-        
