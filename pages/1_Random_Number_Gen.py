@@ -7,16 +7,18 @@ import json
 from pathlib import Path
 
 
-# def rand_gen():
+def rand_gen():
 
-#     for count in range(1, 10):
-#         time.sleep(.5)
-#         st.rerun()
+    for count in range(1, 20):
+        time.sleep(1)
+        st.rerun()
+
+    return
 
 
 with st.sidebar:
-    # st.button("RUN", on_click=rand_gen())
-    st.sidebar.button("STOP")
+    st.button("RUN", on_click=rand_gen())
+    st.button("STOP", on_click=st.stop())
 
 
 col1, col2 = st.columns(2)
