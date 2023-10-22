@@ -6,6 +6,15 @@ import time
 import json
 from pathlib import Path
 
+
+with st.sidebar:
+    st.button("OFF", type="primary", use_container_width=True)
+
+    if st.button('OFF', use_container_width=True):
+        rand_gen = True
+    else:
+        rand_gen = False
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -14,6 +23,10 @@ with col1:
 with col2:
     gauge(random(), gSize="LRG")
 
-# for count in range(1, 50):
-#     time.sleep(.5)
-#     st.rerun()
+st.sidebar.button()
+
+if rand_gen:
+
+    for count in range(1, 50):
+        time.sleep(.5)
+        st.rerun()
