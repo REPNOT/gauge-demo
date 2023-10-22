@@ -18,10 +18,8 @@ with col2:
 with col3:
     gauge(random(), gSize="SML")
 
-st.button("STOP", type="primary", use_container_width=True)
-if st.button('RUN', use_container_width=True):
-    st.rerun()
-else:
+
+if st.button('RUN', type="primary", use_container_width=True):
     st.stop()
 
 for count in range(1, 20):
