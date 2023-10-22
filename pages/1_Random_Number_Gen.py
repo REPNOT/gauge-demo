@@ -23,7 +23,7 @@ with st.sidebar:
 
     if st.button("STOP", type="primary", use_container_width=True):
         st.stop()
-    if st.button("RUN", type="secondary", use_container_width=True):
+    if st.button("RUN", use_container_width=True):
         st.rerun()
     
 for count in range(1, 20):
