@@ -12,15 +12,15 @@ add_selectbox = st.sidebar.selectbox(
 
 with st.container():
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
         gauge(random())
 
-    with col2:
+    with col3:
         gauge(random())
 
-    with col3:
+    with col5:
         gauge(random())
 
     for count in range(1, 50):
