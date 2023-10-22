@@ -4,6 +4,11 @@ from streamViz import gauge
 from random import random
 import time
 
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
 
 col1, col2, col3 = st.columns(3)
 
