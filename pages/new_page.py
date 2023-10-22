@@ -10,6 +10,7 @@ gaugeDrive = 0.0
 for count in range(1, 1000):
 
     gaugeDrive = random()
+    time.sleep(1)
 
 
 easy_gauge(gaugeDrive)
