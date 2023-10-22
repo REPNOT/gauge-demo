@@ -21,9 +21,8 @@ def rand_control(cVal):
     with open(file_str, "w") as fileObj:
         json.dump(tempData, fileObj, indent=4)
 
-    st.rerun()
 
-    return "<===  Random Number Button Cliked  ===>"
+    return st.rerun()
 
 
 def rand_state():
@@ -33,9 +32,9 @@ def rand_state():
     with open(file_str, "r") as fileObj:
         tempData =  json.load(fileObj)
 
+    st.write(tempData)
+
     return tempData["rand_button"]
-
-
 
 col1, col2 = st.columns(3)
 
