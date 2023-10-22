@@ -18,20 +18,11 @@ with col2:
 with col3:
     gauge(random(), gSize="SML")
 
-
-
-run_app = st.rerun()
-stop_app = st.stop()
-
-with st.sidebar:
-
-
-
-    st.button("STOP", use_container_width=True, on_click=run_app)
-    st.button("RUN", use_container_width=True, on_click=stop_app)
-
-
-
+st.button("RUN", type="primary")
+if st.button('STOP', type="primary"):
+    st.run()
+else:
+    st.stop()
 
 for count in range(1, 20):
     time.sleep(.5)
