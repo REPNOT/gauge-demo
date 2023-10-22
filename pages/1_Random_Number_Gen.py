@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 
-col1, col2, col3 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     gauge(random(), gSize="MED", sFix="%")
