@@ -7,6 +7,8 @@ st.set_page_config(layout="centered")
 
 st.write("# Interactive App Demo")
 
+st.divider()
+
 with st.sidebar:
 
     st.write("### Gauge Colors")
@@ -27,7 +29,7 @@ with st.sidebar:
     with col3:
         high_range_color = st.text_input('High', '#1B8720', key=3, disabled=color_opt)
 
-    # st.write("[Adobe Color](https://color.adobe.com/explore)")
+    st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
 
     st.write("### Display Mode")
 
@@ -63,8 +65,7 @@ with st.sidebar:
         label_visibility="collapsed"
     )
 
-
-st.write("### Adjust slider to change gauge value")
+st.write(" Adjust slider to change gauge value")
 gauge_value = st.select_slider(
     'Use slider to adjust gauge value',
     label_visibility="collapsed",

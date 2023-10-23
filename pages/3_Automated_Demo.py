@@ -7,16 +7,29 @@ import time
 
 st.set_page_config(layout="wide")
 
-col1, col2, col3 = st.columns(3)
+"""
+    # Automated Application Demo
+"""
 
-with col1:
-    gauge(random(), gSize="SML", sFix="%")
+st.write(
+    """
+        This application utilizes random number generators and the [(st.run)](https://docs.streamlit.io/library/api-reference/control-flow/st.rerun) feature to rerun the application script.
+        Please use the :red[stop] button located in the sidebar menu to stop the application or navigate to another page.
+    """
+)
 
-with col2:
-    gauge(random(), gSize="LRG", gMode="number+gauge")
+st.divider()
 
-with col3:
-    gauge(random(), gSize="SML", sFix="%")
+col4, col5, col6 = st.columns(3)
+
+with col4:
+    gauge(random(), gSize="SML", sFix="%", cWidth=True)
+
+with col5:
+    gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
+
+with col6:
+    gauge(random(), gSize="SML", sFix="%", cWidth=True)
 
 
 with st.sidebar:
