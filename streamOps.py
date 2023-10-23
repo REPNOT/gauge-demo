@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import streamlit as st
 
+@st.cache_data
 def rd_json_file(fDir, fName):
 
     file_dir = fDir
