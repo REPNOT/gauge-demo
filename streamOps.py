@@ -2,8 +2,7 @@ import json
 from pathlib import Path
 import streamlit as st
 
-
-def rdfile(fDir, fName):
+def rd_json_file(fDir, fName):
 
     file_dir = fDir
     file_name = fName
@@ -13,8 +12,3 @@ def rdfile(fDir, fName):
         rawData = json.load(fileObj)[0]
 
     return rawData
-
-# def get_menu_items(fDir, fName, dLayer1, dLayer2):
-
-
-#     return
