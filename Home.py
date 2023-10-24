@@ -14,6 +14,7 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
+from PIL import Image
 
 
 LOGGER = get_logger(__name__)
@@ -33,34 +34,29 @@ def run():
     }
   )
 
-
-  col1, col2, col3 = st.columns(3)
-
-  with col2:
-    st.markdown(
-      """
-        ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRxeTNkeGw2dXFzbGQxZ3ZicXI1czZjcW0zNnNwbTkyM3A2eXZ1OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b0SEwXOXrWoooxCxGA/giphy.gif)
-      """
-    )
-
-  st.write(" ")
-  st.write(" ")
-
+  with st.sidebar:
+    image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
+    st.image(image)
+    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
 
   st.write("# Plotly Indicator Gauge for Streamlit")
-
-  st.sidebar.success(
-    """
-      Select a demo above.
-                     
-     """
-  )
 
   st.markdown(
     """
       A Streamlit demonstration app for Plotly indicator gauge charts.
     """
   )
+
+  st.divider()
+
+  col1, col2, col3 = st.columns(3)
+
+  with col2:
+    st.markdown(
+      """
+        ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNuamZlbGg2ZHVqdnMweGl0cHdmOWU1Y3Y1cXIwdnF0anptdTh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aWYNvKMvwPVADwIM4i/giphy.gif)
+      """
+    )
 
 if __name__ == "__main__":
     run()
