@@ -1,11 +1,20 @@
 import plotly.graph_objects as go
 import streamlit as st
 from streamViz import gauge
-
+from PIL import Image
 
 st.set_page_config(layout="centered")
 
-st.write("# Interactive App Demo")
+"""
+    # Interactive Demo App
+    
+    This application allows visitors to interact with the Indicator Gauge visualization
+    and configure multiple settings for the gauge.  To change the settings such as resizing
+    the the gauge, changing the gauge indicator colors, or selecting an option to display
+    the gauge value as percentage, please utilize the control features availble in the sidebar
+    located on the left side of the screen.  To interact directly with the gauge, please
+    utilize the slider widget located directly above the gauge.
+"""
 
 st.divider()
 
@@ -64,6 +73,10 @@ with st.sidebar:
         index=2,
         label_visibility="collapsed"
     )
+
+    image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
+    st.image(image)
+    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
 
 st.write(" Adjust slider to change gauge value")
 gauge_value = st.select_slider(
