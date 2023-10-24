@@ -30,7 +30,7 @@ def run():
     menu_items={
         'Get Help': 'https://techbyderek.com',
         'Report a Bug': "https://github.com/REPNOT/gauge-demo",
-        'About': "A Streamlit demonstration app for Plotly indicator gauge charts."
+        'About': "A Streamlit demonstration app for [Plotly](https://plotly.com/python/) indicator gauge charts."
     }
   )
 
@@ -47,13 +47,14 @@ def run():
     image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
     st.image(image)
     '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
+    "&nbsp;&nbsp;&nbsp;https://github.com/REPNOT"
 
   st.write("# Plotly Indicator Gauge Demo App")
 
   st.markdown(
     """
-      A Streamlit demonstration application for utilizing a custom Python module
-      that helps developers quickly incorporate Plotly Gauge visualizations.
+      A [Streamlit](https://streamlit.io/) demonstration application for utilizing a custom [Python](https://www.python.org/) module
+      that helps developers quickly incorporate [Plotly](https://plotly.com/python/) Gauge visualizations
       into their projects with the help of preset parameters. The application includes multiple
       demonstrations and interactive examples to help users become familiar with the module code
       which is available in the [documentation](https://plotly-stream-gauge.streamlit.app/Documentation) 
@@ -62,7 +63,7 @@ def run():
       
       For anyone interested in exploring the application in greater detail, I invite you to begin the journey
       by visiting the [Introduction Demo](https://plotly-stream-gauge.streamlit.app/Introduction_Demo),
-      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo.  The modules included in the introduction assume that the viewer has experience calling functions in the Python 
+      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo.  The modules included in the introduction assume that the viewer has experience calling functions in the [Python](https://www.python.org/)
       programming language. This is a newly created application that will continue to be updated. Links to my social
       media profiles are located towards the bottom this page if you'd like to contact me.
 

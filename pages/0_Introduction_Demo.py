@@ -10,6 +10,7 @@ with st.sidebar:
     image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
     st.image(image)
     '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
+    "&nbsp;&nbsp;&nbsp;https://github.com/REPNOT"
 
 """
     # Introduction Demo
@@ -17,8 +18,7 @@ with st.sidebar:
 
 st.divider()
 
-
-with st.expander('Example 1'):
+with st.expander('Example 1 - Calling the Gauge Function'):
 
     "### Adding a gauge with required value"
 
@@ -35,6 +35,12 @@ with st.expander('Example 1'):
 
         with st.echo(code_location="above"):
 
+            """
+                [Access streamViz Code in App Documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+            """
+            from streamViz import gauge
+            import streamlit as st
+
             gauge(.23)
 
         foo = 'bar'
@@ -42,6 +48,13 @@ with st.expander('Example 1'):
     if _button_2:
 
         with st.echo(code_location="above"):
+
+            """
+                [Access streamViz Code in App Documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+            """
+            from streamViz import gauge
+            import streamlit as st
+
             gauge(.56)
 
         foo = 'bar'
@@ -49,6 +62,13 @@ with st.expander('Example 1'):
     if _button_3:
 
         with st.echo(code_location="above"):
+
+            """
+                [Access streamViz Code in App Documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+            """
+            from streamViz import gauge
+            import streamlit as st
+
             gauge(.89)
 
         foo = 'bar'
