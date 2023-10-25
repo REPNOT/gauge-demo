@@ -60,23 +60,39 @@ with st.expander('Example 1 - Calling the Gauge Function'):
         foo = 'bar'
 
 
-with st.expander('Example 2'):
+with st.expander('Example 2 - Resizing the Gauge'):
     
     """
         ### Resizing the gauge using the preset options
-        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+        ![Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
     """
 
     col21, col22, col23, col24 = st.columns(4)
 
     with col21:
-        _button_1 = st.button('SML', type="primary", key="4")
+        _button_1 = st.button(
+            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SML &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 
+            type="primary", 
+            key="4"
+        )
     with col22:
-        _button_2 = st.button('MED', type="primary", key="5")
+        _button_2 = st.button(
+            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 
+            type="primary", 
+            key="5"
+        )
     with col23:
-        _button_3 = st.button('LRG', type="primary", key="6")
+        _button_3 = st.button(
+            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LRG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 
+            type="primary", 
+            key="6"
+        )
     with col24:
-        _button_4 = st.button('FULL', type="primary", key="7")
+        _button_4 = st.button(
+            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FULL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', 
+            type="primary", 
+            key="7"
+        )
 
     if _button_1:
 
@@ -107,7 +123,7 @@ with st.expander('Example 2'):
         foo = 'bar'
 
 
-with st.expander('Example 3'):
+with st.expander('Example 3 - Create a Gauge Title'):
 
     """
         ### Assigning a title to the gauge using a variable
@@ -124,10 +140,10 @@ with st.expander('Example 3'):
         foo = 'bar'
 
 
-with st.expander('Example 4'):
+with st.expander('Example 4 - Convert to Percentage'):
 
     """
-        ### Assigning a title to the gauge using a variable
+        ### Change the primary display value shown in the gauge using a toggle switch.
         [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
     """
 
@@ -148,10 +164,10 @@ with st.expander('Example 4'):
     foo = 'bar'
 
 
-with st.expander('Example 5'):
+with st.expander('Example 5 - Modify Gauge Type & Color'):
 
     """
-        ### Modifying the gauge display type using preset options
+        ### Modifying the gauge display type using preset options and customize the color theme.
         [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
     """
 
