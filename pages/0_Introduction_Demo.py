@@ -81,7 +81,6 @@ with st.expander('Example 2'):
     if _button_1:
 
         with st.echo(code_location="above"):
-
             gauge(.19, gSize="SML")
 
         foo = 'bar'
@@ -136,14 +135,15 @@ with st.expander('Example 4'):
 
     if _toggle_1:
 
-        __TOGGLE_VALUE__ = "%"
+        toggle_value = "%"
 
     else:
 
-        __TOGGLE_VALUE__ = None
+        toggle_value = None
 
     with st.echo(code_location="above"):
-        gauge(.85, gSize="LRG", gTitle="Plotly Stream Gauge", sFix=__TOGGLE_VALUE__)
+
+        gauge(.85, gSize="LRG", gTitle="Plotly Stream Gauge", sFix=toggle_value)
 
     foo = 'bar'
 
