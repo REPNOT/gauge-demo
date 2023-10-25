@@ -11,9 +11,6 @@ with st.sidebar:
     '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
     "&nbsp;&nbsp;&nbsp;https://github.com/REPNOT"
 
-[Python](https://www.python.org/)
-[Plotly](https://plotly.com/python/)
-
 """
     # Documentation
     This page contains [Python](https://www.python.org/) code and JSON files for datasets used in each of the demonstration
