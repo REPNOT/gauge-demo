@@ -7,6 +7,7 @@ st.set_page_config(
 )
 
 with st.sidebar:
+
     image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
     st.image(image)
     '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
@@ -20,7 +21,10 @@ st.divider()
 
 with st.expander('Example 1 - Calling the Gauge Function'):
 
-    "### Adding a gauge with required value"
+    """
+        ### Adding a gauge with required value
+        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+    """
 
     col11, col12, col13 = st.columns(3)
 
@@ -35,12 +39,6 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
         with st.echo(code_location="above"):
 
-            """
-                [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
-            """
-            from streamViz import gauge
-            import streamlit as st
-
             gauge(.23)
 
         foo = 'bar'
@@ -48,12 +46,6 @@ with st.expander('Example 1 - Calling the Gauge Function'):
     if _button_2:
 
         with st.echo(code_location="above"):
-
-            """
-                [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
-            """
-            from streamViz import gauge
-            import streamlit as st
 
             gauge(.56)
 
@@ -63,12 +55,6 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
         with st.echo(code_location="above"):
 
-            """
-                [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
-            """
-            from streamViz import gauge
-            import streamlit as st
-
             gauge(.89)
 
         foo = 'bar'
@@ -76,7 +62,10 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
 with st.expander('Example 2'):
     
-    "### Resizing the gauge using the preset options"
+    """
+        ### Resizing the gauge using the preset options
+        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+    """
 
     col21, col22, col23, col24 = st.columns(4)
 
@@ -92,6 +81,7 @@ with st.expander('Example 2'):
     if _button_1:
 
         with st.echo(code_location="above"):
+
             gauge(.19, gSize="SML")
 
         foo = 'bar'
@@ -120,7 +110,10 @@ with st.expander('Example 2'):
 
 with st.expander('Example 3'):
 
-    "### Assigning a title to the gauge using a variable"
+    """
+        ### Assigning a title to the gauge using a variable
+        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+    """
 
     __YOUR_TITLE__ = st.text_input('Gauge Title', key='8', placeholder="Enter a gauge title here...")
 
@@ -134,7 +127,10 @@ with st.expander('Example 3'):
 
 with st.expander('Example 4'):
 
-    "### Assigning a title to the gauge using a variable"
+    """
+        ### Assigning a title to the gauge using a variable
+        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+    """
 
     _toggle_1 = st.toggle('Display Gauge Value as %', key='9')
 
@@ -154,7 +150,10 @@ with st.expander('Example 4'):
 
 with st.expander('Example 5'):
 
-    "### Modifying the gauge display type using preset options"
+    """
+        ### Modifying the gauge display type using preset options
+        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+    """
 
     col1, col2, col3 = st.columns(3)
 
