@@ -48,9 +48,16 @@ def run():
 
   with st.sidebar:
     image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
-    st.image(image)
-    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
-    "&nbsp;&nbsp;&nbsp;https://github.com/REPNOT"
+    st.image(image, use_column_width=False, width=120)
+    'www.techbyderek.com'
+    "[![GitHub Logo](https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.png 'GitHub Logo')](https://github.com/REPNOT)"
+
+    """
+      <a href="https://www.markdownguide.org" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="120" height="60">
+      </a>
+    """
+
 
   st.write("# Plotly Indicator Gauge Demo App")
 

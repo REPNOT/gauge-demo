@@ -7,9 +7,9 @@ st.set_page_config(layout="wide")
 with st.sidebar:
 
     image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
-    st.image(image)
-    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
-    "&nbsp;&nbsp;&nbsp;https://github.com/REPNOT"
+    st.image(image, use_column_width=False, width=120)
+    'www.techbyderek.com'
+    "https://github.com/REPNOT"
 
 """
     # Documentation
