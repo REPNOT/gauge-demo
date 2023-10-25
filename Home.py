@@ -30,9 +30,12 @@ def run():
     menu_items={
         'Get Help': 'https://techbyderek.com',
         'Report a Bug': "https://github.com/REPNOT/gauge-demo",
-        'About': "A Streamlit demonstration app for [Plotly](https://plotly.com/python/) indicator gauge charts."
+        'About': "A [Streamlit](https://streamlit.io/) demonstration app for [Plotly](https://plotly.com/python/) indicator gauge charts."
     }
   )
+
+
+
 
   col1, col2, col3 = st.columns(3)
 
@@ -62,8 +65,9 @@ def run():
       dependencies, tools used for development, and parameters, will be listed in the body of this page.
       
       For anyone interested in exploring the application in greater detail, I invite you to begin the journey
-      by visiting the [Introduction Demo](https://plotly-stream-gauge.streamlit.app/Introduction_Demo),
-      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo.  The modules included in the introduction assume that the viewer has experience calling functions in the [Python](https://www.python.org/)
+      by visiting the [Introduction Demo](https://https://rev-gauge.streamlit.app/Introduction_Demo/Introduction_Demo),
+      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo.  
+      The modules included in the introduction assume that the viewer has experience calling functions in the [Python](https://www.python.org/)
       programming language. This is a newly created application that will continue to be updated. Links to my social
       media profiles are located towards the bottom this page if you'd like to contact me.
 

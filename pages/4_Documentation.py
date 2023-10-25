@@ -11,10 +11,13 @@ with st.sidebar:
     '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.techbyderek.com'
     "&nbsp;&nbsp;&nbsp;https://github.com/REPNOT"
 
+[Python](https://www.python.org/)
+[Plotly](https://plotly.com/python/)
+
 """
     # Documentation
-    This page contains code and data files used for each of the demonstration apps presented throughout
-    the site.  Visitors are welcomed to view, download, and utilize the files at their descretion.
+    This page contains [Python](https://www.python.org/) code and JSON files for datasets used in each of the demonstration
+    apps.  Visitors are welcomed to view, download, and utilize the files at their descretion.
 """
 
 st.divider()
