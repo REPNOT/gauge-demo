@@ -383,7 +383,7 @@ with col2:
         col1, col2 = st.columns(2)
 
         with col1:
-            with open("/workspaces/gauge-demo/data/elec_supply_dispos_org.json", "rb") as file:
+            with open("data/elec_supply_dispos_org.json", "rb") as file:
                 btn = st.download_button(
                         label="Download Data - Verison 2",
                         data=file,
@@ -392,7 +392,7 @@ with col2:
                     )
 
         with col2:
-            with open("/workspaces/gauge-demo/data/elec_supply_dispos_org.json", "rb") as file:
+            with open("data/elec_supply_dispos_org.json", "rb") as file:
                 btn = st.download_button(
                         label="Download Data - Verison 2",
                         data=file,
