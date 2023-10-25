@@ -15,9 +15,10 @@ st.set_page_config(layout="wide")
 st.write(
     """
         This application utilizes random number generators and the [st.run](https://docs.streamlit.io/library/api-reference/control-flow/st.rerun) feature to produce
-        visual effects comparable to a live data stream and is intended to showcase Streamlit's capabilities.  The visual effects can be stopped at any time by pressing 
-        the :red[stop] button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the random number generators can
-        only be restarted by refreshing the browser or back out of the page and then re-entering.
+        visual effects comparable to a live data stream and is intended to showcase [Streamlit's](https://streamlit.io/) capabilities.  The visual effects can be
+        stopped at any time by pressing the :red[stop] button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the
+        random number generators can only be restarted by refreshing the browser or back out of the page and then re-entering.
+
     """
 )
 

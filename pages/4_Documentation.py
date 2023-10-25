@@ -380,7 +380,6 @@ with col2:
 
     with st.expander("Data Files - Dashboard Demo App"):
 
-
         col1, col2 = st.columns(2)
 
         with col1:

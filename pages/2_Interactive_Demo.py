@@ -10,10 +10,11 @@ st.set_page_config(layout="centered")
     
     This application allows visitors to interact with the Indicator Gauge visualization
     and configure multiple settings for the gauge.  To change the settings such as resizing
-    the the gauge, changing the gauge indicator colors, or selecting an option to display
-    the gauge value as percentage, please utilize the control features availble in the sidebar
-    located on the left side of the screen.  To interact directly with the gauge, please
-    utilize the slider widget located directly above the gauge.
+    the gauge, changing the gauge indicator colors, or selecting an option that displays
+    the value as a percentage, please utilize the control features available in the sidebar.
+    To interact directly with the gauge, please utilize the slider widget located directly
+    above the gauge.
+
 """
 
 st.divider()

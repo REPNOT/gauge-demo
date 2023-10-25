@@ -20,7 +20,7 @@ st.set_page_config(
     This dashboard application combines multiple Plotly Indicator Gauge visualization's with several Streamlit components
     to present Annual Supply & Disposition of Electricity report data collected from the [U.S. Energy Information Administration's](https://www.eia.gov/)
     website using thier publicly available [API](https://www.eia.gov/opendata/).  The data for this application is available
-    for download in a JSON format on the [documentation](https://plotly-stream-gauge.streamlit.app/Documentation) page of this site.
+    for download in a JSON format on the [documentation](https://rev-gauge.streamlit.app/Documentation) page of this site.
     I recommend selecting a State from the dropdown menu in the sidebar menu prior to navigating the rest of the page.  Once a State has been
     selected, data will populate in various areas of the application that are blank by default when the application starts. 
 """

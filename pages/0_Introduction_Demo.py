@@ -36,7 +36,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
         with st.echo(code_location="above"):
 
             """
-                [Access streamViz Code in App Documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+                [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
             """
             from streamViz import gauge
             import streamlit as st
@@ -50,7 +50,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
         with st.echo(code_location="above"):
 
             """
-                [Access streamViz Code in App Documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+                [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
             """
             from streamViz import gauge
             import streamlit as st
@@ -64,7 +64,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
         with st.echo(code_location="above"):
 
             """
-                [Access streamViz Code in App Documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+                [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
             """
             from streamViz import gauge
             import streamlit as st
