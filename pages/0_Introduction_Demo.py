@@ -49,11 +49,9 @@ st.markdown(
 st.markdown(
     """
         <p>
-            Each of the following tabs below display different examples how to call the gauge function using different parameters to customize the visualization.
-            Exapnding the tabs will reveal different input features used to interact with each example, while also displaying and executing the code required to
-            produce the gauge visualization.  All text input fields require the user to press enter once the desired value has been entered and color modification
-            fields require Hex color codes or their associated name.
-        </p>
+            Each of the following tabs below display different examples for how to call the gauge function using different parameters to customize the visualization.
+            Exapnding the tabs will reveal different input features used to interact with each demo, while also displaying and executing the code required to
+            produce the gauge visualization.
     """, unsafe_allow_html=True
 )
 
