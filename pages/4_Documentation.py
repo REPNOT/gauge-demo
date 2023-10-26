@@ -86,7 +86,7 @@ with st.expander("Source Code - streamViz.py"):
             ["sFix", "string", "gauge Value Suffix (default 0.0)", "%"],
             ["gTheme", "string", "Gauge theme color (default Black)"]
         ],
-        columns=["Name", "Short Desc", "Data Type", "Options"]
+        columns=["Name", "Data Type", "Short Desc", "Options"]
     )
 
 

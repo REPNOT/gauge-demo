@@ -52,6 +52,8 @@ st.markdown(
             Each of the following tabs below display different examples for how to call the gauge function using different parameters to customize the visualization.
             Exapnding the tabs will reveal different input features used to interact with each demo, while also displaying and executing the code required to
             produce the gauge visualization.
+
+        </p>
     """, unsafe_allow_html=True
 )
 
