@@ -1,7 +1,6 @@
-import plotly.graph_objects as go
 import streamlit as st
 from streamViz import gauge
-from PIL import Image
+
 
 st.set_page_config(
     page_title="Rev Gauge",

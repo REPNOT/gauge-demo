@@ -1,9 +1,7 @@
-import plotly.graph_objects as go
 import streamlit as st
 from streamViz import gauge
 from random import random
 import time
-from PIL import Image
 
 
 st.set_page_config(
