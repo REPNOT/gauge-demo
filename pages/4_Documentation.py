@@ -53,44 +53,6 @@ st.markdown(
 st.divider()
 
 
-"## App Data"
-
-with st.expander("Data Files - Dashboard Demo App"):
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        with open("data/elec_supply_dispos_org.json", "rb") as file:
-            btn = st.download_button(
-                    label="Download Data - Verison 2",
-                    data=file,
-                    file_name="elec_supply_dispos_org.json",
-                    mime="json"
-                )
-
-    with col2:
-        with open("data/elec_supply_dispos_org.json", "rb") as file:
-            btn = st.download_button(
-                    label="Download Data - Verison 2",
-                    data=file,
-                    file_name="elec_supply_dispos.json",
-                    mime="json"
-                )
-
-    st.divider()
-
-    """
-        ## U.S. Energy Information Admin.
-        ### Annual Supply & Disposition of Electricity Reporting Data
-
-        Data utilized in the Dashboard Demo application was collected
-        from U.S. Energy Information Administration's website using
-        their publicly available API.  The data can be downloaded
-        using the button at the top of this container.
-
-    """
-    st.link_button("EIA - Homepage", "https://www.eia.gov/")
-
 "## App Code"
 
 with st.expander("Source Code - Gauge Function"):
@@ -182,6 +144,47 @@ with st.expander("Source Code - Gauge Function"):
         )"""
 
     st.code(functionCode, language='python')
+
+
+"## App Data"
+
+with st.expander("Data Files - Dashboard Demo App"):
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        with open("data/elec_supply_dispos_org.json", "rb") as file:
+            btn = st.download_button(
+                    label="Download Data - Verison 2",
+                    data=file,
+                    file_name="elec_supply_dispos_org.json",
+                    mime="json"
+                )
+
+    with col2:
+        with open("data/elec_supply_dispos_org.json", "rb") as file:
+            btn = st.download_button(
+                    label="Download Data - Verison 2",
+                    data=file,
+                    file_name="elec_supply_dispos.json",
+                    mime="json"
+                )
+
+    st.divider()
+
+    """
+        ## U.S. Energy Information Admin.
+        ### Annual Supply & Disposition of Electricity Reporting Data
+
+        Data utilized in the Dashboard Demo application was collected
+        from U.S. Energy Information Administration's website using
+        their publicly available API.  The data can be downloaded
+        using the button at the top of this container.
+
+    """
+    st.link_button("EIA - Homepage", "https://www.eia.gov/")
+
+
 
 with st.expander("Data Reporting Demo"):
 
