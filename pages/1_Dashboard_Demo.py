@@ -1,4 +1,3 @@
-import json
 from pathlib import Path
 from pprint import pprint
 import streamlit as st
@@ -7,8 +6,6 @@ from streamOps import rd_json_file
 from streamOps import json_to_array
 from streamOps import clean_col_lst
 import pandas as pd
-import requests
-from PIL import Image
 
 
 st.set_page_config(
@@ -54,7 +51,7 @@ with st.sidebar:
     state_opt = st.selectbox(
         "State", 
         options=rd_json_file(dataFileDir, dataFile1)['metadata']['states'],
-        index=None
+        index=0
     )
 
 df = pd.DataFrame(
@@ -74,6 +71,7 @@ df = df[[
 ]]
 
 year_df = df[df['period']==str(year_opt)]
+year_df = year_df.nsmallest(51, 'total-supply')
 state_df = df[df['state']==str(state_opt)]
 combined = year_df[year_df['state']==str(state_opt)]
 

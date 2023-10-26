@@ -1,8 +1,6 @@
 import json
 from pathlib import Path
 import streamlit as st
-import requests
-import json
 
 @st.cache_data
 def rd_json_file(fDir, fName):
