@@ -54,7 +54,7 @@ st.markdown(
         <p>
 
         This application utilizes random number generators and the <a href="https://docs.streamlit.io/library/api-reference/control-flow/st.rerun" target="_blank">st.run</a> feature to produce 
-        effects comparable to a live data stream and is intended to showcase <a href="https://streamlit.io/" target="_blank">Streamlit</a> capabilities.  The application can be
+        effects comparable to a live data stream and is intended to showcase <a href="https://streamlit.io/" target="_blank">Streamlit's</a> capabilities.  The application can be
         stopped at any time by pressing the stop button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the
         random number generators can only be restarted by refreshing the browser or by back out of the page and then re-entering.
 
