@@ -53,7 +53,7 @@ st.markdown(
 st.divider()
 
 
-"## App Code"
+"## Source Code"
 
 with st.expander("Source Code - Gauge Function"):
     st.markdown(
