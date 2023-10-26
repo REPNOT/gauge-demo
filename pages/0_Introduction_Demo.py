@@ -55,8 +55,6 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-
-
 st.divider()
 
 with st.expander('Example 1 - Calling the Gauge Function'):
