@@ -558,7 +558,8 @@ st.dataframe(df,
     column_config={
         "Long Desc": st.column_config.TextColumn(
             "Long Desc",
-            max_chars=500
+            max_chars=500,
+            width="large"
         )
     },
     hide_index=True,)
