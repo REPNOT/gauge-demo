@@ -550,7 +550,7 @@ df = pd.DataFrame(
         ["sFix", "gauge Value Suffix (default 0.0)", "", "", ""],
         ["gTheme", "Gauge theme color (default Black)", "", "", ""]
     ],
-    ["Name", "Short Desc", "Data Type", "Options", "Long Desc"]
+    columns=["Name", "Short Desc", "Data Type", "Options", "Long Desc"]
 )
 
 
