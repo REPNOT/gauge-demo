@@ -18,27 +18,23 @@ def run():
       """
           <div>
           <strong>
-              <a href="https://rev-gauge.streamlit.app/Home" target="_self">Home</a>
+              <a href="https://rev-gauge.streamlit.app/Home" target="_top">Home</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
-              <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">Introduction Demo</a>
+              <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_top">Introduction Demo</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
-              <a href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">Dashboard Demo</a>
+              <a href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_top">Dashboard Demo</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
-              <a href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">Interactive Demo</a>
+              <a href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_top">Interactive Demo</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
-              <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated Demo</a>
-          </strong>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <strong>
-              <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated Demo</a>
+              <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_top">Automated Demo</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
