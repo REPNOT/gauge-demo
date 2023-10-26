@@ -145,6 +145,9 @@ with st.expander("Source Code - Gauge Function"):
 
     st.code(functionCode, language='python')
 
+
+"## App Code"
+
 with st.expander("Data Reporting Demo"):
 
     """
