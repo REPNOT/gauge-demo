@@ -123,7 +123,7 @@ with st.expander("Source Code - Gauge Function"):
     """
 
     funcCode2 = """
-        \"\"\"
+        \t\"\"\"
             Deploy Plotly gauge or indicator data visualization
 
                 Keyword arguments:
@@ -232,7 +232,7 @@ with st.expander("Source Code - Gauge Function"):
                 arTop --  Bottom Axis Range Value (default 0.0)
                 pTheme -- Plot Theme (default 0.0)
                 cWidth -- Container Width (default 0.0)
-        \"\"\"
+        \t\"\"\"
     """
 
     funcCode3 = """
