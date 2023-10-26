@@ -57,7 +57,7 @@ def gauge(gVal, gTitle="", gMode='gauge+number', gSize="FULL", gTheme="Black",
         Data Type:
             integer, float
 
-    grMid -- Middle gauge Range (default 0.70) -- 
+    grMid -- Middle gauge Range (default 0.70)
         Description:
             Sets the middle percentile target group for the gauge value.  When
             the gauge Value (gVal) is less than the value assigned to this argument,

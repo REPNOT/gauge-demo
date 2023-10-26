@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 st.set_page_config(
     page_title="Rev Gauge",
     layout="wide",
@@ -531,4 +532,22 @@ st.markdown(
     </a>
     </div>
     """, unsafe_allow_html=True
+)
+
+
+st.dataframe(
+    [
+        ["gVal", "gauge Value (required)", "", "", ""],
+        ["gTitle", "gauge Title (default '')", "", "", ""],
+        ["gMode", "gauge Mode (default gauge+number)", "string", "gauge+number, gauge, number", "Adds a header displayed at the top of the visualization."],
+        ["gSize", "gauge Size (default FULL)", "", "", ""],
+        ["grLow", "Low gauge Range (default 0.30)", "", "", ""],
+        ["grMid", "Middle gauge Range (default 0.70)", "", "", ""],
+        ["gcLow", "Low gauge Color (default #FF1708)", "", "", ""],
+        ["gcMid", "Middle gauge Color (default #FF9400)", "", "", ""],
+        ["gcHigh", "High gauge Color (default #1B8720)", "", "", ""],
+        ["sFix", "gauge Value Suffix (default 0.0)", "", "", ""],
+        ["gTheme", "Gauge theme color (default Black)", "", "", ""]
+    ],
+    ["Name", "Short Desc", "Data Type", "Options", "Long Desc"]
 )
