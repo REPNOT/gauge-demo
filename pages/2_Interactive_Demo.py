@@ -42,63 +42,72 @@ st.markdown(
         </div>
     """, unsafe_allow_html=True
 )
+
+st.markdown(
+"""
+    <h1>Documentation</h1>
+    <p>
+        This page contains <a href="https://www.python.org/" target="_blank">Python</a> code and JSON files for datasets used in each of the demonstration
+        apps.  Visitors are welcomed to view, download, and utilize the files at their descretion.
+    </p>
+""", unsafe_allow_html=True
+)
+
 st.divider()
 
-with st.sidebar:
+with st.expander("Gauge Settings"):
 
-    st.write("### Gauge Colors")
-
-    color_Toggle = st.toggle('Modify Gauge Colors')
-
-    if color_Toggle:
-        color_opt = False
-    else:
-        color_opt = True
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        low_range_color = st.text_input('Low', '#FF1708', key=1, disabled=color_opt)
+        sFix_Toggle = st.toggle('Display value as %')
+        if sFix_Toggle:
+            suffix_toggle = "%"
+        else:
+            suffix_toggle = None
     with col2:
-        mid_range_color = st.text_input('Mid', '#FF9400', key=2, disabled=color_opt)
+        color_Toggle = st.toggle('Modify Gauge Colors')
+        if color_Toggle:
+            color_opt = False
+        else:
+            color_opt = True
     with col3:
+        st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
+
+    col5, col6, col7 = st.columns(3)
+
+    with col5:
+        low_range_color = st.text_input('Low', '#FF1708', key=1, disabled=color_opt)
+
+    with col6:
+        mid_range_color = st.text_input('Mid', '#FF9400', key=2, disabled=color_opt)
+    with col7:
         high_range_color = st.text_input('High', '#1B8720', key=3, disabled=color_opt)
 
-    st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
+    col8, col9 = st.columns(2)
 
-    st.write("### Display Mode")
+    with col8:
+        gauge_size = st.selectbox(
+            "Gauge Size",
+            ("SML", "MED", "LRG", "FULL"),
+            index=3
+        )
+    with col9:
+        gMode_option = st.selectbox(
+            "Display Mode",
+            ("Gauge Only", "Gauge & Value", "Value Only"),
+            index=1
+        )
 
-    sFix_Toggle = st.toggle('Display value as %')
-
-    if sFix_Toggle:
-        suffix_toggle = "%"
-    else:
-        suffix_toggle = None
-
-    gMode_option = st.radio(
-        "Display Mode",
-        ["gauge+number", "gauge", "number"],
-        captions = ["Display gauge & value", "Display gauge only", "Display value only"],
-        label_visibility="collapsed"
-    )
-
-    if gMode_option == "gauge":
-        mode_val = "gauge"
-    elif gMode_option == "number":
-        mode_val = "number"
-    elif gMode_option == "number+gauge":
-        mode_val = "number+gauge"
-    else:
-        mode_val = "number+gauge"
-
-    st.write("### Gauge Size")
-
-    gauge_size = st.selectbox(
-        "Gauge Size",
-        ("SML", "MED", "LRG", "FULL"),
-        index=2,
-        label_visibility="collapsed"
-    )
+if gMode_option == "Gauge Only":
+    mode_val = "gauge"
+elif gMode_option == "Value Only":
+    mode_val = "number"
+elif gMode_option == "Gauge & Value":
+    mode_val = "number+gauge"
+else:
+    mode_val = "number+gauge"
 
 st.write(" Adjust slider to change gauge value")
 gauge_value = st.select_slider(

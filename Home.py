@@ -47,13 +47,6 @@ def run():
           </div>
       """, unsafe_allow_html=True
   )
-  st.divider()
-
-  st.markdown(
-      """
-        ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNuamZlbGg2ZHVqdnMweGl0cHdmOWU1Y3Y1cXIwdnF0anptdTh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aWYNvKMvwPVADwIM4i/giphy.gif)
-      """
-  )
 
 
 
@@ -88,6 +81,12 @@ def run():
       </p>
 
     """, unsafe_allow_html=True
+  )
+
+  st.markdown(
+      """
+        ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNuamZlbGg2ZHVqdnMweGl0cHdmOWU1Y3Y1cXIwdnF0anptdTh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aWYNvKMvwPVADwIM4i/giphy.gif)
+      """
   )
 
   st.divider()
