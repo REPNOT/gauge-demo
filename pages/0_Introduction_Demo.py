@@ -42,43 +42,22 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-        <div>
-        <strong>
-            <a href="https://rev-gauge.streamlit.app" target="_self">Home</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">Introduction_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">Dashboard_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">Interactive_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Documentation" target="_self">Documentation</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="25" height="25">
-        </a>
-        </div>
-    """, unsafe_allow_html=True
-)
-
 """
     # Introduction Demo
 """
+
+st.markdown(
+    """
+        <p>
+            Each of the following tabs below display different examples how to call the gauge function using different parameters to customize the visualization.
+            Exapnding the tabs will reveal different input features used to interact with each example, while also displaying and executing the code required to
+            produce the gauge visualization.  All text input fields require the user to press enter once the desired value has been entered and color modification
+            fields require Hex color codes or their associated name.
+        </p>
+    """, unsafe_allow_html=True
+)
+
+
 
 st.divider()
 
