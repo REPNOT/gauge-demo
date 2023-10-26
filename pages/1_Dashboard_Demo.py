@@ -128,37 +128,35 @@ if year_opt:
 
 st.dataframe(main_df, use_container_width=True, hide_index=True)
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     gauge(
-        tot_net_gen, 
-        gMode='number',
-        gTitle="Total Net Generation",
-        gSize='FULL', 
+        gaugeVal, 
+        gMode='number+gauge',
+        gTitle="Total Net Generation / Total Supply",
+        sFix='%', gSize='FULL', 
         cWidth=True, grLow=.90, 
         grMid=.95
     )
 with col2:
     gauge(
-        tot_supply, 
-        gTitle="Total Generation Supply",
-        gMode='number', 
-        gSize='FULL', 
+        tot_net_gen, 
+        gMode='number',
+        gTitle="Total Net Generation",
+        gSize='SML', 
         cWidth=True, grLow=.90, 
         grMid=.95
     )
-
-
-gauge(
-    gaugeVal, 
-    gMode='number+gauge',
-    gTitle="Total Net Generation / Total Supply",
-    sFix='%', gSize='FULL', 
-    cWidth=True, grLow=.90, 
-    grMid=.95
-)
-
+with col3:
+    gauge(
+        tot_supply, 
+        gTitle="Total Generation Supply",
+        gMode='number', 
+        gSize='SML', 
+        cWidth=True, grLow=.90, 
+        grMid=.95
+    )
 
 "## ", year_opt, " - Supply & Disposition of Electricity Report data for the state of ", state_str
 
