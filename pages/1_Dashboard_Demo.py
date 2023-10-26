@@ -38,12 +38,12 @@ columns = clean_col_lst(
 )
 
 with st.sidebar:
-    st.success(
+
+    st.markdown(
         """
-            ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome!\n
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please make your
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections below.
-        """
+        <h3>Welcome!</h3>
+        <p>Please make your selections below.</p>
+        """, unsafe_allow_html=True
     )
     year_opt = st.selectbox(
         "Year", 
@@ -55,26 +55,6 @@ with st.sidebar:
         "State", 
         options=rd_json_file(dataFileDir, dataFile1)['metadata']['states'],
         index=None
-    )
-
-    st.write(" ")
-
-    st.markdown(
-        """
-          <a href="https://www.techbyderek.com" target="_blank">
-            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
-          </a>
-          <br>
-          <br>
-        """, unsafe_allow_html=True
-    )
-
-    st.markdown(
-      """
-        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
-        </a>
-      """, unsafe_allow_html=True
     )
 
 df = pd.DataFrame(
@@ -94,7 +74,6 @@ df = df[[
 ]]
 
 year_df = df[df['period']==str(year_opt)]
-year_df = year_df.nsmallest(51, 'estimated-losses')
 state_df = df[df['state']==str(state_opt)]
 combined = year_df[year_df['state']==str(state_opt)]
 
@@ -151,12 +130,10 @@ with col3:
 with st.expander("View Data Table"):
     st.dataframe(state_df, hide_index=True, use_container_width=True)
 
-col4, col5 = st.columns(2)
+st.line_chart(state_df, x='period', y='estimated-losses', height=400)
 
-with col4:
-    st.bar_chart(state_df, x='period', y='total-supply', height=400)
-with col5:
-    st.line_chart(state_df, x='period', y='estimated-losses', height=400)
+st.bar_chart(state_df, x='period', y='total-supply', height=400)
+
 
 "## ", year_opt, " Annual Supply & Disposition of Electricity Report Data"
 
@@ -164,3 +141,19 @@ with st.expander("View Data Table"):
     st.dataframe(year_df, hide_index=True, use_container_width=True)
 
 st.bar_chart(year_df, x='state', y='total-supply', height=450)
+
+st.divider()
+
+st.markdown(
+    """
+    <div>
+    <a href="https://www.techbyderek.com" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="80">
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="50" height="50">
+    </a>
+    </div>
+    """, unsafe_allow_html=True
+)

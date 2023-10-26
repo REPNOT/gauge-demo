@@ -4,7 +4,6 @@ from pathlib import Path
 
 st.set_page_config(layout="wide")
 
-
 st.markdown(
 """
 
@@ -18,7 +17,6 @@ st.markdown(
 )
 
 st.divider()
-
 
 
 "## App Data"

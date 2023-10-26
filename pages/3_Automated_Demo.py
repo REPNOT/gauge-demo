@@ -34,26 +34,21 @@ gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
 if st.button('STOP', type="primary", use_container_width=True):
     st.stop()
 
+st.divider()
 
-with st.sidebar:
-
-    st.markdown(
-        """
-          <a href="https://www.techbyderek.com" target="_blank">
-            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
-          </a>
-          <br>
-          <br>
-        """, unsafe_allow_html=True
-    )
-
-    st.markdown(
-      """
-        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
-        </a>
-      """, unsafe_allow_html=True
-    )
+st.markdown(
+    """
+    <div>
+      <a href="https://www.techbyderek.com" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="80">
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="50" height="50">
+      </a>
+    </div>
+    """, unsafe_allow_html=True
+)
 
 for count in range(1, 20):
     time.sleep(.5)

@@ -56,53 +56,6 @@ def run():
 
   st.divider()
 
-  """
-    ### Software & Tools Used
-
-    | Product              | Link                                                          |
-    | -------------------- | ------------------------------------------------------------- |
-    | Github Codespaces    | https://github.com/features/codespaces                        |
-    | Github Repositories  | https://github.com/                                           |
-    | Microsoft VS Code    | https://code.visualstudio.com/                                |
-    | Techsmith Camtasia   | https://www.techsmith.com/video-editor.html                   |
-    | GIPHY                | https://giphy.com/                                            |
-    | git                  | https://git-scm.com/                                          |
-    | Streamlit Workspaces | https://share.streamlit.io/                                   |
-    | Typedown 1.2.18.0    | https://apps.microsoft.com/detail/9P8TCW4H2HB4?hl=en-us&gl=US |
-
-  """
-
-  """
-    ### Programming Languages, Frameworks, Libraries
-
-    | Languages & Libraries | Link              |
-    | --------------------- | --------------------------------------------- |
-    | Python                | https://www.python.org/                       |
-    | Streamlit             | https://streamlit.io/                         |
-    | Plotly                | https://plotly.com/python/                    |
-    | Markdown              | https://daringfireball.net/projects/markdown/ |
-
-  """
-
-  """
-    ### Dependencies
-
-    | Library   | Language | Link                                                               |
-    | --------- | -------- | ------------------------------------------------------------------ |
-    | Streamlit | Python   | https://github.com/streamlit/streamlit                             |
-    | Plotly    | Python   | https://github.com/plotly/plotly.py                                |
-    | Image     | Python   | https://pypi.org/project/image/                                    |
-    | time      | Python   | https://github.com/python/cpython/blob/main/Doc/library/time.rst   |
-    | pandas    | Python   | https://github.com/pandas-dev/pandas                               |
-    | json      | Python   | https://github.com/python/cpython/blob/main/Doc/library/json.rst   |
-    | requests  | Python   | https://pypi.org/project/requests/                                 |
-    | pathlib   | Python   | https://pypi.org/project/pathlib/                                  |
-    | pprint    | Python   | https://github.com/python/cpython/blob/main/Doc/library/pprint.rst |
-
-  """
-
-  st.divider()
-
   st.markdown(
       """
       <div>

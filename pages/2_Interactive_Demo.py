@@ -3,7 +3,7 @@ import streamlit as st
 from streamViz import gauge
 from PIL import Image
 
-st.set_page_config(layout="centered")
+st.set_page_config(layout="wide")
 
 """
     # Interactive Demo App
@@ -75,24 +75,6 @@ with st.sidebar:
         label_visibility="collapsed"
     )
 
-    st.markdown(
-        """
-          <a href="https://www.techbyderek.com" target="_blank">
-            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
-          </a>
-          <br>
-          <br>
-        """, unsafe_allow_html=True
-    )
-
-    st.markdown(
-      """
-        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
-        </a>
-      """, unsafe_allow_html=True
-    )
-
 st.write(" Adjust slider to change gauge value")
 gauge_value = st.select_slider(
     'Use slider to adjust gauge value',
@@ -115,4 +97,20 @@ gauge(
     gcLow=low_range_color, 
     gcMid=mid_range_color, 
     gcHigh=high_range_color
+)
+
+st.divider()
+
+st.markdown(
+    """
+    <div>
+    <a href="https://www.techbyderek.com" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="80">
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="50" height="50">
+    </a>
+    </div>
+    """, unsafe_allow_html=True
 )
