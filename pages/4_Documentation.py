@@ -57,10 +57,10 @@ st.divider()
 
 "## Source Code"
 
-with st.expander("Source Code - Gauge Function"):
+with st.expander("Source Code - streamViz.py"):
     st.markdown(
     """
-    <h2>Source Code</h2>
+    <h2>streamViz.py</h2>
     <p>
         The code provided below can be copied and used in any Streamlit application to deploy
         gauge visualizations used throughout this demonstration app.  Use of this function requires
