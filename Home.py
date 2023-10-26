@@ -55,28 +55,12 @@ def run():
     """
 
       <p>
-
       A <a href="https://streamlit.io/" target="_blank">Streamlit</a> demonstration application for utilizing a custom <a href="https://www.python.org/" target="_blank">Python</a> module
       that helps developers quickly incorporate <a href="https://plotly.com/python/" target="_blank">Plotly</a> Gauge visualizations
       into their projects with the help of preset parameters. The application includes multiple
-      demonstrations and interactive examples to help users become familiar with the module code
-      which is available in the <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">documentation</a> 
-      located at the bottom of the sidebar menu.  Additional information about the application, including
-      dependencies, tools used for development, and parameters, will be listed in the body of this page.
-
-      </p>
-      
-      <p>
-
-      For anyone interested in exploring the application in greater detail, I invite you to begin the journey
-      by visiting the <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_blank">Introduction Demo</a>,
-      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo. The modules included in the introduction 
-      assume that the viewer has experience calling functions in the <a href="https://www.python.org/" target="_blank">Python</a>
-      programming language. This is a newly created application that will continue to be updated. Links to my social
-      media profiles are located towards the bottom this page if you'd like to contact me.
-
-      With that being said, thank you for visiting and welcome! :smile:
-
+      demonstrations and interactive examples to help users become familiar with the module.  Additional information about the application, including
+      source code, dependencies, tools used for development, and parameters, can be found in the <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">documentation</a>
+      section the site.
       </p>
 
     """, unsafe_allow_html=True
