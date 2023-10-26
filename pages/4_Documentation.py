@@ -569,7 +569,7 @@ st.dataframe(df,
         "Short Desc": st.column_config.TextColumn(
             "Short Desc",
             max_chars=500,
-            width="small"
+            width="medium"
         )
     },
     hide_index=True)
