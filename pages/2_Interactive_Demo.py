@@ -44,7 +44,7 @@ st.markdown(
 
 st.markdown(
 """
-    <h1>Documentation</h1>
+    <h1>Interactive Demo</h1>
     <p>
         This page provides a demonstration that allows viewers to directly interact with the gauge visualization, while also providing
         a group of settings that can be used to customize the gauge.
