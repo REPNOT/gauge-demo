@@ -67,15 +67,6 @@ columns = clean_col_lst(
     "-unit"
 )
 
-with st.sidebar:
-
-    st.markdown(
-        """
-        <h3>Welcome!</h3>
-        <p>Please make your selections below.</p>
-        """, unsafe_allow_html=True
-    )
-
 col1, col2 = st.columns(2)
 
 with col1:
