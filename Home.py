@@ -18,7 +18,7 @@ def run():
       """
           <div>
           <strong>
-              <a href="https://rev-gauge.streamlit.app/" target="_self">Home</a>
+              <a href="https://rev-gauge.streamlit.app/Home" target="_self">Home</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
