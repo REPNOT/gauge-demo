@@ -3,7 +3,7 @@ import streamlit as st
 from streamViz import gauge
 
 st.set_page_config(
-    page_title="Introduction Demo",
+    page_title="Rev Gauge",
     layout="wide",
     initial_sidebar_state="collapsed"
 )

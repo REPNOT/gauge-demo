@@ -9,7 +9,7 @@ LOGGER = get_logger(__name__)
 def run():
 
   st.set_page_config(
-      page_title="Home",
+      page_title="Rev Gauge",
       layout="wide",
       initial_sidebar_state="collapsed"
   )
@@ -18,7 +18,7 @@ def run():
       """
           <div>
           <strong>
-              <a href="https://rev-gauge.streamlit.app/Home" target="_top">Home</a>
+              <a href="https://rev-gauge.streamlit.app/Home" target="_self">Home</a>
           </strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <strong>
