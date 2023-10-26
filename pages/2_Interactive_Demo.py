@@ -46,8 +46,8 @@ st.markdown(
 """
     <h1>Documentation</h1>
     <p>
-        This page contains <a href="https://www.python.org/" target="_blank">Python</a> code and JSON files for datasets used in each of the demonstration
-        apps.  Visitors are welcomed to view, download, and utilize the files at their descretion.
+        This page provides a demonstration that allows viewers to directly interact with the gauge visualization, while also providing
+        a group of settings that can be used to customize the gauge.
     </p>
 """, unsafe_allow_html=True
 )
