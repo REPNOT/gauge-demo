@@ -109,6 +109,8 @@ with st.expander("Source Code - Gauge Function"):
             )
         },
         hide_index=True)
+    
+    st.divider()
 
     funcCode1 = """
         import plotly.graph_objects as go
