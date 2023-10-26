@@ -321,7 +321,7 @@ with st.expander("Introduction Demo"):
         from PIL import Image
         import streamlit as st
         from streamViz import gauge
-        
+
         with st.expander('Example 1 - Calling the Gauge Function'):
 
             st.markdown(
@@ -537,22 +537,13 @@ with st.expander("Data Reporting Demo"):
     """
 
     reportCode = """
-        import json
-        from pathlib import Path
-        from pprint import pprint
+
         import streamlit as st
         from streamViz import gauge
         from streamOps import rd_json_file
         from streamOps import json_to_array
         from streamOps import clean_col_lst
         import pandas as pd
-        import requests
-
-        st.set_page_config(
-            layout="wide"
-        )
-
-        st.write('# Data Reporting Application Demo')
 
         dataFile1 = 'elec_supply_dispos'
         dataFile2 = 'elec_supply_dispos_org'
@@ -563,22 +554,20 @@ with st.expander("Data Reporting Demo"):
             "-unit"
         )
 
-        with st.sidebar:
+        col1, col2 = st.columns(2)
 
-            '### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome!\\n'
-            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please make your'
-            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selections below.'
-
+        with col1:
             year_opt = st.selectbox(
                 "Year", 
                 options=rd_json_file(dataFileDir, dataFile1)['metadata']['years'],
                 index=0
             )
 
+        with col2:
             state_opt = st.selectbox(
                 "State", 
                 options=rd_json_file(dataFileDir, dataFile1)['metadata']['states'],
-                index=None
+                index=0
             )
 
         df = pd.DataFrame(
@@ -598,10 +587,9 @@ with st.expander("Data Reporting Demo"):
         ]]
 
         year_df = df[df['period']==str(year_opt)]
-        year_df = year_df.nsmallest(51, 'estimated-losses')
+        year_df = year_df.nsmallest(51, 'total-supply')
         state_df = df[df['state']==str(state_opt)]
         combined = year_df[year_df['state']==str(state_opt)]
-        # combined.reset_index(drop=True)
 
         if year_opt:
 
@@ -619,29 +607,29 @@ with st.expander("Data Reporting Demo"):
                 main_df = combined
                 state_str = state_df['stateDescription'].iloc[0]
 
-        st.dataframe(main_df, use_container_width=True)
+        st.dataframe(main_df, use_container_width=True, hide_index=True)
 
-        col1, col2, col3 = st.columns(3)
+        col3, col4, col5 = st.columns(3)
 
-        with col1:
-            gauge(
-                tot_net_gen, 
-                gMode='number',
-                gTitle="Total Net Generation - Megawatthours",
-                gSize='SML', 
-                cWidth=True, grLow=.90, 
-                grMid=.95
-            )
-        with col2:
+        with col3:
             gauge(
                 gaugeVal, 
                 gMode='number+gauge',
                 gTitle="Total Net Generation / Total Supply",
-                sFix='%', gSize='MED', 
+                sFix='%', gSize='FULL', 
                 cWidth=True, grLow=.90, 
                 grMid=.95
             )
-        with col3:
+        with col4:
+            gauge(
+                tot_net_gen, 
+                gMode='number',
+                gTitle="Total Net Generation",
+                gSize='SML', 
+                cWidth=True, grLow=.90, 
+                grMid=.95
+            )
+        with col5:
             gauge(
                 tot_supply, 
                 gTitle="Total Generation Supply",
@@ -651,25 +639,22 @@ with st.expander("Data Reporting Demo"):
                 grMid=.95
             )
 
-        "## ", year_opt, " - Supply and Disposition of Electricity Report Data for the state of ", state_str
+        "## ", year_opt, " - Supply & Disposition of Electricity Report data for the state of ", state_str
 
         with st.expander("View Data Table"):
             st.dataframe(state_df, hide_index=True, use_container_width=True)
 
-        col4, col5 = st.columns(2)
+        st.line_chart(state_df, x='period', y='estimated-losses', height=400)
 
-        with col4:
-            st.bar_chart(state_df, x='period', y='total-supply', height=400)
-        with col5:
-            st.line_chart(state_df, x='period', y='estimated-losses', height=400)
+        st.bar_chart(state_df, x='period', y='total-supply', height=400)
 
-        "## ", year_opt, " Annual Statewide Supply and Disposition of Electricity Reporting Data"
+
+        "## ", year_opt, " Annual Supply & Disposition of Electricity Report Data"
 
         with st.expander("View Data Table"):
             st.dataframe(year_df, hide_index=True, use_container_width=True)
 
         st.bar_chart(year_df, x='state', y='total-supply', height=450)
-
     """
 
     st.code(reportCode, language='python')
@@ -684,67 +669,64 @@ with st.expander("Interactive Demo"):
 
     interCode = """
 
-        import plotly.graph_objects as go
         import streamlit as st
         from streamViz import gauge
 
-        with st.sidebar:
+        with st.expander("Gauge Settings"):
 
-            st.write("### Gauge Colors")
-
-            color_Toggle = st.toggle('Modify Gauge Colors')
-
-            if color_Toggle:
-                color_opt = False
-            else:
-                color_opt = True
 
             col1, col2, col3 = st.columns(3)
 
             with col1:
-                low_range_color = st.text_input('Low','#FF1708', key=1, disabled=color_opt)
+                sFix_Toggle = st.toggle('Display value as %')
+                if sFix_Toggle:
+                    suffix_toggle = "%"
+                else:
+                    suffix_toggle = None
             with col2:
-                mid_range_color = st.text_input('Mid', '#FF9400', key=2, disabled=color_opt)
+                color_Toggle = st.toggle('Modify Gauge Colors')
+                if color_Toggle:
+                    color_opt = False
+                else:
+                    color_opt = True
             with col3:
+                st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
+
+            col5, col6, col7 = st.columns(3)
+
+            with col5:
+                low_range_color = st.text_input('Low', '#FF1708', key=1, disabled=color_opt)
+
+            with col6:
+                mid_range_color = st.text_input('Mid', '#FF9400', key=2, disabled=color_opt)
+            with col7:
                 high_range_color = st.text_input('High', '#1B8720', key=3, disabled=color_opt)
 
-            st.write("### Display Mode")
+            col8, col9 = st.columns(2)
 
-            sFix_Toggle = st.toggle('Display value as %')
+            with col8:
+                gauge_size = st.selectbox(
+                    "Gauge Size",
+                    ("SML", "MED", "LRG", "FULL"),
+                    index=3
+                )
+            with col9:
+                gMode_option = st.selectbox(
+                    "Display Mode",
+                    ("Gauge Only", "Gauge & Value", "Value Only"),
+                    index=1
+                )
 
-            if sFix_Toggle:
-                suffix_toggle = "%"
-            else:
-                suffix_toggle = None
+        if gMode_option == "Gauge Only":
+            mode_val = "gauge"
+        elif gMode_option == "Value Only":
+            mode_val = "number"
+        elif gMode_option == "Gauge & Value":
+            mode_val = "number+gauge"
+        else:
+            mode_val = "number+gauge"
 
-            gMode_option = st.radio(
-                "Display Mode",
-                ["gauge+number", "gauge", "number"],
-                captions = ["Display gauge & value", 
-                            "Display gauge only", 
-                            "Display value only"],
-                label_visibility="collapsed"
-            )
-
-            if gMode_option == "gauge":
-                mode_val = "gauge"
-            elif gMode_option == "number":
-                mode_val = "number"
-            elif gMode_option == "number+gauge":
-                mode_val = "number+gauge"
-            else:
-                mode_val = "number+gauge"
-
-            st.write("### Gauge Size")
-
-            gauge_size = st.selectbox(
-                "Gauge Size",
-                ("SML", "MED", "LRG", "FULL"),
-                index=2,
-                label_visibility="collapsed"
-            )
-
-        st.write("### Adjust slider to change gauge value")
+        st.write(" Adjust slider to change gauge value")
         gauge_value = st.select_slider(
             'Use slider to adjust gauge value',
             label_visibility="collapsed",
@@ -766,8 +748,7 @@ with st.expander("Interactive Demo"):
             gcLow=low_range_color, 
             gcMid=mid_range_color, 
             gcHigh=high_range_color
-        )
-    """
+        )    """
 
     st.code(interCode, language='python')
 
