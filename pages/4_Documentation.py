@@ -44,7 +44,7 @@ st.markdown(
 """
     <h1>Documentation</h1>
     <p>
-        This page contains <a href="https://www.python.org/" target="_blank">Python</a> code, JSON files for datasets used dashbaord demonstration,
+        This page contains <a href="https://www.python.org/" target="_blank">Python</a> code, JSON files for datasets used in the dashbaord demonstration,
         and additional documentation related to content presented throughout the application.  Visitors are welcomed to view, download, and utilize the files at their descretion.
     </p>
 """, unsafe_allow_html=True
