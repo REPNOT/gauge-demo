@@ -68,19 +68,173 @@ with st.expander("Source Code - Gauge Function"):
         dependencies vary by operating system, I would recommend doing some research for anyone
         who is unfamiliar with the process.
     </p>
+    <h3>Function Parameters</h3>
     """, unsafe_allow_html=True
     )
 
-    functionCode = """
+    df = pd.DataFrame(
+        [
+            ["gVal", "integer, float", "gauge Value (required)"],
+            ["gTitle", "string", "gauge Title (default '')"],
+            ["gMode", "string", "gauge Mode (default gauge+number)", "gauge+number, gauge, number"],
+            ["gSize", "String", "gauge Size (default FULL)", "SML, MED, LRG, FULL, CUST"],
+            ["grLow", "integer, float", "Low gauge Range (default 0.30)"],
+            ["grMid", "integer, float", "Middle gauge Range (default 0.70)"],
+            ["gcLow", "string", "Low gauge Color (default #FF1708)"],
+            ["gcMid", "string", "Middle gauge Color (default #FF9400)"],
+            ["gcHigh", "string", "High gauge Color (default #1B8720)"],
+            ["sFix", "string", "gauge Value Suffix (default 0.0)", "%"],
+            ["gTheme", "string", "Gauge theme color (default Black)"]
+        ],
+        columns=["Name", "Short Desc", "Data Type", "Options"]
+    )
 
-    import plotly.graph_objects as go
-    import streamlit as st
 
-    def gauge(gVal, gTitle="", gMode='gauge+number', gSize="FULL", gTheme="Black",
-            grLow=.29, grMid=.69, gcLow='#FF1708', gcMid='#FF9400', 
-            gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
-            arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
+    st.dataframe(df,
+        column_config={
+            "Long Desc": st.column_config.TextColumn(
+                "Long Desc",
+                max_chars=500,
+                width="large"
+            ),
+            "Options": st.column_config.TextColumn(
+                "Options",
+                max_chars=500,
+                width="large"
+            ),
+            "Short Desc": st.column_config.TextColumn(
+                "Short Desc",
+                max_chars=500,
+                width="medium"
+            )
+        },
+        hide_index=True)
 
+    funcCode1 = """
+        import plotly.graph_objects as go
+        import streamlit as st
+
+
+        def gauge(gVal, gTitle="", gMode='gauge+number', gSize="FULL", gTheme="Black",
+                grLow=.29, grMid=.69, gcLow='#FF1708', gcMid='#FF9400', 
+                gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
+                arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
+
+    """
+
+    funcCode2 = """
+        Deploy Plotly gauge or indicator data visualization
+
+            Keyword arguments:
+
+            gVal -- gauge Value (required)
+                Description:
+                    The value passed to this argument is displayed in
+                    the center of the visualization, drives the color & position
+                    of the gauge and is required to successfully call this function.
+                Data Type:
+                    integer, float
+
+            gTitle -- gauge Title (default '')
+                Description:
+                    Adds a header displayed at the top
+                    of the visualization.
+                Data Type:
+                    string
+
+            gMode -- gauge Mode (default gauge+number)
+                Description:
+                    Declares which type of visualization should
+                    be displayed.
+                Options:
+                    gauge+number, gauge, number
+                Data Type:
+                    string
+
+            gSize -- gauge Size (default FULL)
+                Description:
+                    Automatically resizes the gauge or indicator using 
+                    pre-defined values options.
+
+                    The size of visualization can also be customized by passing the 'CUST' value to
+                    the argument and assigning a decimal value from 0 to 1 to the following 
+                    arguments; xpLeft, xpRight, ypBot, and ypTop.
+                Options:
+                    SML, MED, LRG, FULL, CUST
+                Data Type:
+                    String
+
+            grLow -- Low gauge Range (default 0.30)
+                Description:
+                    Sets the bottom (lowest) percentile target group for the gauge value.  
+                    When the gauge Value (gVal) is less than the value assigned to this
+                    argument, the color assigned to the gcLow (Low gauge Color) argument
+                    is displayed.
+                Data Type:
+                    integer, float
+
+            grMid -- Middle gauge Range (default 0.70)
+                Description:
+                    Sets the middle percentile target group for the gauge value.  When
+                    the gauge Value (gVal) is less than the value assigned to this argument,
+                    the color assigned to the gcMid (Middle gauge Color) argument is displayed.
+                    
+                    If the value assigned to the gVal argument is greater than or equal to
+                    the value assigned to the grMid argument, the color value assigned to
+                    gcHigh will then be displayed.
+                Data Type:
+                    integer, float
+
+            gcLow -- Low gauge Color (default #FF1708)
+                Description:
+                    gauge color for bottom percentile target group. Default value
+                    is a hex code for red.  Argument excepts hex color codes and 
+                    there associated names.
+                Data Type:
+                    string
+
+            gcMid -- Middle gauge Color (default #FF9400)
+                Description:
+                    gauge color for middle percentile target group. Default value
+                    is a hex code for orange.  Argument excepts hex color codes and 
+                    there associated names.
+                Data Type:
+                    string
+
+            gcHigh -- High gauge Color (default #1B8720)
+                Description:
+                    gauge color for middle percentile target group. Default value
+                    is a hex code for green.  Argument excepts hex color codes and 
+                    there associated names.
+                Data Type:
+                    string
+
+            sFix -- gauge Value Suffix (default 0.0)
+                Description:
+                    Adds a suffix (character) to the gauge value displayed in the
+                    center of the visualization.
+                    
+                    Assigning the '%' character to this argument will display the
+                    percentage symbol at the end of the value shown in the center
+                    of the visualization and convert the gauge value from a floating
+                    point integer so the value displays correctly as a percentage.
+                Options:
+                    %
+                Data Type:
+                    string
+
+            xpLeft -- X-Axis Position 1 for Plot (default 0.0)
+            xpRight --  X-Axis Position 2 for Plot (default 0.0)
+            ypBot --  X-Axis Position 1 for Plot (default 0.0)
+            ypTop --  X-Axis Position 2 for Plot (default 0.0)
+            arBot -- Bottom Axis Range Value (default 0.0) 
+            arTop --  Bottom Axis Range Value (default 0.0)
+            pTheme -- Plot Theme (default 0.0)
+            cWidth -- Container Width (default 0.0)
+
+    """
+
+    funcCode3 = """
         if sFix == "%":
 
             gaugeVal = round((gVal * 100), 1)
@@ -143,9 +297,12 @@ with st.expander("Source Code - Gauge Function"):
             use_container_width=cWidth, 
             theme=pTheme, 
             **{'config':config}
-        )"""
+        )
+    """
 
-    st.code(functionCode, language='python')
+    funcCode = f"{funcCode1}{funcCode2}{funcCode3}"
+
+    st.code(funcCode, language='python')
 
 
 "## App Code"
