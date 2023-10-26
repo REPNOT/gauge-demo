@@ -34,19 +34,24 @@ st.divider()
 
 with st.expander('Example 1 - Calling the Gauge Function'):
 
-    """
-        ### Adding a gauge with required value
-        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
-    """
+    st.markdown(
+        """
+
+        <h3>Adding a gauge with required value</h3>
+        <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
+        <br><br>
+
+        """, unsafe_allow_html=True
+    )
 
     col11, col12, col13 = st.columns(3)
 
     with col11:
-        _button_1 = st.button('Low Gauge Value', type="primary", key="1")
+        _button_1 = st.button('Low Value', type="primary", key="1")
     with col12:
-        _button_2 = st.button('Mid Gauge Value', type="primary", key="2")
+        _button_2 = st.button('Mid Value', type="primary", key="2")
     with col13:
-        _button_3 = st.button('High Gauge Value', type="primary", key="3")
+        _button_3 = st.button('High Value', type="primary", key="3")
 
     if _button_1:
 
@@ -75,10 +80,15 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
 with st.expander('Example 2 - Resizing the Gauge'):
     
-    """
-        ### Resizing the gauge using the preset options
-        ![Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
-    """
+    st.markdown(
+        """
+
+        <h3>Resizing the gauge using the preset options</h3>
+        <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
+        <br><br>
+
+        """, unsafe_allow_html=True
+    )
 
     col21, col22, col23, col24 = st.columns(4)
 
@@ -148,7 +158,7 @@ with st.expander('Example 3 - Create a Gauge Title'):
     if __YOUR_TITLE__:
 
         with st.echo(code_location="above"):
-            gauge(.85, gSize="LRG", gTitle=__YOUR_TITLE__)
+            gauge(.85, gSize="SML", gTitle=__YOUR_TITLE__)
 
         foo = 'bar'
 

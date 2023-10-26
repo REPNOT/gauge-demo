@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 
-def gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
+def gauge(gVal, gTitle="", gMode='gauge+number', gSize="FULL", gTheme="Black",
           grLow=.29, grMid=.69, gcLow='#FF1708', gcMid='#FF9400', 
           gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
           arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
@@ -35,7 +35,7 @@ def gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
         Data Type:
             string
 
-    gSize -- gauge Size (default MED)
+    gSize -- gauge Size (default FULL)
         Description:
             Automatically resizes the gauge or indicator using 
             pre-defined values options.
@@ -164,6 +164,15 @@ def gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
     ))
 
     config = {'displayModeBar': False}
+    fig1.update_traces(title_font_color=gTheme, selector=dict(type='indicator'))
+    fig1.update_traces(number_font_color=gTheme, selector=dict(type='indicator'))
+    fig1.update_traces(gauge_axis_tickfont_color=gTheme, selector=dict(type='indicator'))
+    fig1.update_layout(margin_b=5)
+    fig1.update_layout(margin_l=20)
+    fig1.update_layout(margin_r=20)
+    fig1.update_layout(margin_t=50)
+
+    fig1.update_layout(margin_autoexpand=True)
 
     st.plotly_chart(
         fig1, 

@@ -123,7 +123,7 @@ with col1:
         tot_net_gen, 
         gMode='number',
         gTitle="Total Net Generation",
-        gSize='SML', 
+        gSize='FULL', 
         cWidth=True, grLow=.90, 
         grMid=.95
     )
@@ -132,7 +132,7 @@ with col2:
         gaugeVal, 
         gMode='number+gauge',
         gTitle="Total Net Generation / Total Supply",
-        sFix='%', gSize='MED', 
+        sFix='%', gSize='FULL', 
         cWidth=True, grLow=.90, 
         grMid=.95
     )
@@ -141,7 +141,7 @@ with col3:
         tot_supply, 
         gTitle="Total Generation Supply",
         gMode='number', 
-        gSize='SML', 
+        gSize='FULL', 
         cWidth=True, grLow=.90, 
         grMid=.95
     )
