@@ -560,6 +560,16 @@ st.dataframe(df,
             "Long Desc",
             max_chars=500,
             width="large"
+        ),
+        "Options": st.column_config.TextColumn(
+            "Options",
+            max_chars=500,
+            width="large"
+        ),
+        "Short Desc": st.column_config.TextColumn(
+            "Short Desc",
+            max_chars=500,
+            width="large"
         )
     },
     hide_index=True,)
