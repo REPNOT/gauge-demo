@@ -761,23 +761,19 @@ with st.expander("Automated Demo"):
     """
 
     codeStr = """
-        col4, col5, col6 = st.columns(3)
+        import streamlit as st
+        from streamViz import gauge
+        from random import random
+        import time
 
-        with col4:
-            gauge(random(), gSize="SML", sFix="%", cWidth=True)
+        gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
 
-        with col5:
-            gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
+        if st.button('STOP', type="primary", use_container_width=True):
+            st.stop()
 
-        with col6:
-            gauge(random(), gSize="SML", sFix="%", cWidth=True)
-
-        with st.sidebar:
-            if st.button('STOP', type="primary", use_container_width=True):
-                st.stop()
 
         for count in range(1, 20):
-            time.sleep(.5)
+            time.sleep(.95)
             st.rerun()
     """
 
