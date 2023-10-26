@@ -128,7 +128,18 @@ if year_opt:
 
 st.dataframe(main_df, use_container_width=True, hide_index=True)
 
-col1, col2, col3 = st.columns(3)
+
+gauge(
+    gaugeVal, 
+    gMode='number+gauge',
+    gTitle="Total Net Generation / Total Supply",
+    sFix='%', gSize='FULL', 
+    cWidth=True, grLow=.90, 
+    grMid=.95
+)
+
+
+col1, col2 = st.columns(2)
 
 with col1:
     gauge(
@@ -140,15 +151,6 @@ with col1:
         grMid=.95
     )
 with col2:
-    gauge(
-        gaugeVal, 
-        gMode='number+gauge',
-        gTitle="Total Net Generation / Total Supply",
-        sFix='%', gSize='FULL', 
-        cWidth=True, grLow=.90, 
-        grMid=.95
-    )
-with col3:
     gauge(
         tot_supply, 
         gTitle="Total Generation Supply",
