@@ -93,15 +93,14 @@ with st.expander("Data Files - Dashboard Demo App"):
 
 "## App Code"
 
-with st.expander("Plotly Stream Gauge Function"):
+with st.expander("Source Code - Gauge Function"):
     st.markdown(
     """
 
-    <h2>Documentation</h2>
-        <p>
-        This page contains <a href="https://www.python.org/" target="_blank">Python</a> code and JSON files for datasets used in each of the demonstration
-        apps.  Visitors are welcomed to view, download, and utilize the files at their descretion.
-        </p>
+    <h2>Source Code</h2>
+    <p>
+        The code provided below can be copied and used in any Streamlit application upon installation of required dependencies.
+    </p>
 
     """, unsafe_allow_html=True
     )
