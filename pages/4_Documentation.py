@@ -535,7 +535,7 @@ st.markdown(
 )
 
 
-st.dataframe(
+st.table(
     [
         ["gVal", "gauge Value (required)", "", "", ""],
         ["gTitle", "gauge Title (default '')", "", "", ""],
