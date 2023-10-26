@@ -3,7 +3,7 @@ from PIL import Image
 from pathlib import Path
 
 st.set_page_config(
-    page_title="Documentation",
+    page_title="Rev Gauge",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -12,7 +12,7 @@ st.markdown(
     """
         <div>
         <strong>
-            <a href="https://rev-gauge.streamlit.app/" target="_self">Home</a>
+            <a href="https://rev-gauge.streamlit.app" target="_self">Home</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
@@ -32,10 +32,6 @@ st.markdown(
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
-            <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
             <a href="https://rev-gauge.streamlit.app/Documentation" target="_self">Documentation</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -45,7 +41,6 @@ st.markdown(
         </div>
     """, unsafe_allow_html=True
 )
-
 st.divider()
 
 st.markdown(
