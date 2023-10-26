@@ -20,19 +20,19 @@ st.markdown(
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
-            <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">Introduction Demo</a>
+            <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">Introduction_Demo</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
-            <a href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">Dashboard Demo</a>
+            <a href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">Dashboard_Demo</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
-            <a href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">Interactive Demo</a>
+            <a href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">Interactive_Demo</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
-            <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated Demo</a>
+            <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated_Demo</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <strong>
