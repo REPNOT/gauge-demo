@@ -90,5 +90,5 @@ st.markdown(
 )
 
 for count in range(1, 20):
-    time.sleep(.75)
+    time.sleep(.95)
     st.rerun()
