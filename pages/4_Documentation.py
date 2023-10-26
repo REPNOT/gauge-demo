@@ -317,6 +317,11 @@ with st.expander("Introduction Demo"):
     """
 
     codeStr = """
+
+        from PIL import Image
+        import streamlit as st
+        from streamViz import gauge
+        
         with st.expander('Example 1 - Calling the Gauge Function'):
 
             st.markdown(
