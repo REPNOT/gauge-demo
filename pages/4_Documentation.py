@@ -538,17 +538,17 @@ st.markdown(
 
 df = pd.DataFrame(
     [
-        ["gVal", "gauge Value (required)", "", "", ""],
-        ["gTitle", "gauge Title (default '')", "", "", ""],
-        ["gMode", "gauge Mode (default gauge+number)", "string", "gauge+number, gauge, number", "Adds a header displayed at the top of the visualization."],
-        ["gSize", "gauge Size (default FULL)", "", "", ""],
-        ["grLow", "Low gauge Range (default 0.30)", "", "", ""],
-        ["grMid", "Middle gauge Range (default 0.70)", "", "", ""],
-        ["gcLow", "Low gauge Color (default #FF1708)", "", "", ""],
-        ["gcMid", "Middle gauge Color (default #FF9400)", "", "", ""],
-        ["gcHigh", "High gauge Color (default #1B8720)", "", "", ""],
-        ["sFix", "gauge Value Suffix (default 0.0)", "", "", ""],
-        ["gTheme", "Gauge theme color (default Black)", "", "", ""]
+        ["gVal", "integer, float", "gauge Value (required)"],
+        ["gTitle", "string", "gauge Title (default '')"],
+        ["gMode", "string", "gauge Mode (default gauge+number)", "gauge+number, gauge, number"],
+        ["gSize", "String", "gauge Size (default FULL)", "SML, MED, LRG, FULL, CUST"],
+        ["grLow", "integer, float", "Low gauge Range (default 0.30)"],
+        ["grMid", "integer, float", "Middle gauge Range (default 0.70)"],
+        ["gcLow", "string", "Low gauge Color (default #FF1708)"],
+        ["gcMid", "string", "Middle gauge Color (default #FF9400)"],
+        ["gcHigh", "string", "High gauge Color (default #1B8720)"],
+        ["sFix", "string", "gauge Value Suffix (default 0.0)", "%"],
+        ["gTheme", "string", "Gauge theme color (default Black)"]
     ],
     columns=["Name", "Short Desc", "Data Type", "Options", "Long Desc"]
 )
@@ -572,4 +572,4 @@ st.dataframe(df,
             width="large"
         )
     },
-    hide_index=True,)
+    hide_index=True)
