@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 
 st.set_page_config(
@@ -535,7 +536,7 @@ st.markdown(
 )
 
 
-st.table(
+df = pd.DataFrame(
     [
         ["gVal", "gauge Value (required)", "", "", ""],
         ["gTitle", "gauge Title (default '')", "", "", ""],
@@ -551,3 +552,6 @@ st.table(
     ],
     ["Name", "Short Desc", "Data Type", "Options", "Long Desc"]
 )
+
+
+st.dataframe(df)
