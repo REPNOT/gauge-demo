@@ -45,7 +45,7 @@ st.markdown(
 )
 
 """
-    # Automated Application Demo
+    # Automated Demo
 """
 
 st.markdown(
