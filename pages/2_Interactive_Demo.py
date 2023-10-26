@@ -75,10 +75,23 @@ with st.sidebar:
         label_visibility="collapsed"
     )
 
-    image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
-    st.image(image, use_column_width=False, width=120)
-    'www.techbyderek.com'
-    "https://github.com/REPNOT"
+    st.markdown(
+        """
+          <a href="https://www.techbyderek.com" target="_blank">
+            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
+          </a>
+          <br>
+          <br>
+        """, unsafe_allow_html=True
+    )
+
+    st.markdown(
+      """
+        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
+        </a>
+      """, unsafe_allow_html=True
+    )
 
 st.write(" Adjust slider to change gauge value")
 gauge_value = st.select_slider(

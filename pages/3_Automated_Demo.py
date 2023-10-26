@@ -12,39 +12,48 @@ st.set_page_config(layout="wide")
     # Automated Application Demo
 """
 
-st.write(
+st.markdown(
     """
-        This application utilizes random number generators and the [st.run](https://docs.streamlit.io/library/api-reference/control-flow/st.rerun) feature to produce
-        visual effects comparable to a live data stream and is intended to showcase [Streamlit's](https://streamlit.io/) capabilities.  The visual effects can be
-        stopped at any time by pressing the :red[stop] button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the
+
+        <p>
+
+        This application utilizes random number generators and the <a href="https://docs.streamlit.io/library/api-reference/control-flow/st.rerun" target="_blank">st.run</a> feature to produce 
+        effects comparable to a live data stream and is intended to showcase <a href="https://streamlit.io/" target="_blank">Streamlit</a> capabilities.  The application can be
+        stopped at any time by pressing the stop button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the
         random number generators can only be restarted by refreshing the browser or back out of the page and then re-entering.
 
-    """
+        </p>
+
+    """, unsafe_allow_html=True
 )
 
 st.divider()
 
-col4, col5, col6 = st.columns(3)
+gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
 
-with col4:
-    gauge(random(), gSize="SML", sFix="%", cWidth=True)
-
-with col5:
-    gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
-
-with col6:
-    gauge(random(), gSize="SML", sFix="%", cWidth=True)
+if st.button('STOP', type="primary", use_container_width=True):
+    st.stop()
 
 
 with st.sidebar:
 
-    if st.button('STOP', type="primary", use_container_width=True):
-        st.stop()
+    st.markdown(
+        """
+          <a href="https://www.techbyderek.com" target="_blank">
+            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
+          </a>
+          <br>
+          <br>
+        """, unsafe_allow_html=True
+    )
 
-    image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
-    st.image(image, use_column_width=False, width=120)
-    'www.techbyderek.com'
-    "https://github.com/REPNOT"
+    st.markdown(
+      """
+        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
+        </a>
+      """, unsafe_allow_html=True
+    )
 
 for count in range(1, 20):
     time.sleep(.5)

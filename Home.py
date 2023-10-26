@@ -1,17 +1,3 @@
-# Copyright (c) Streamlit Inc. (2018-2022) Snowflake Inc. (2022)
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import streamlit as st
 from streamlit.logger import get_logger
 from PIL import Image
@@ -26,61 +12,67 @@ def run():
     page_title="Indicator Gauge",
     page_icon=":chart:",
     layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://techbyderek.com',
-        'Report a Bug': "https://github.com/REPNOT/gauge-demo",
-        'About': "A [Streamlit](https://streamlit.io/) demonstration app for [Plotly](https://plotly.com/python/) indicator gauge charts."
-    }
+    initial_sidebar_state="expanded"
   )
 
-
-
-
-  col1, col2, col3 = st.columns(3)
-
-  with col2:
-    st.markdown(
+  st.markdown(
       """
         ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNuamZlbGg2ZHVqdnMweGl0cHdmOWU1Y3Y1cXIwdnF0anptdTh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aWYNvKMvwPVADwIM4i/giphy.gif)
       """
   )
 
   with st.sidebar:
-    image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
-    st.image(image, use_column_width=False, width=120)
-    'www.techbyderek.com'
-    "[![GitHub Logo](https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.png 'GitHub Logo')](https://github.com/REPNOT)"
 
-    """
-      <a href="https://www.markdownguide.org" target="_blank">
-        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="120" height="60">
-      </a>
-    """
+    st.markdown(
+        """
+          <a href="https://www.techbyderek.com" target="_blank">
+            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
+          </a>
+          <br>
+          <br>
+        """, unsafe_allow_html=True
+    )
+
+    st.markdown(
+      """
+        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
+        </a>
+      """, unsafe_allow_html=True
+    )
 
 
   st.write("# Plotly Indicator Gauge Demo App")
 
   st.markdown(
     """
-      A [Streamlit](https://streamlit.io/) demonstration application for utilizing a custom [Python](https://www.python.org/) module
-      that helps developers quickly incorporate [Plotly](https://plotly.com/python/) Gauge visualizations
+
+      <p>
+
+      A <a href="https://streamlit.io/" target="_blank">Streamlit</a> demonstration application for utilizing a custom <a href="https://www.python.org/" target="_blank">Python</a> module
+      that helps developers quickly incorporate <a href="https://plotly.com/python/" target="_blank">Plotly</a> Gauge visualizations
       into their projects with the help of preset parameters. The application includes multiple
       demonstrations and interactive examples to help users become familiar with the module code
-      which is available in the [documentation](https://plotly-stream-gauge.streamlit.app/Documentation) 
+      which is available in the <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">documentation</a> 
       located at the bottom of the sidebar menu.  Additional information about the application, including
       dependencies, tools used for development, and parameters, will be listed in the body of this page.
+
+      </p>
       
+      <p>
+
       For anyone interested in exploring the application in greater detail, I invite you to begin the journey
-      by visiting the [Introduction Demo](https://https://rev-gauge.streamlit.app/Introduction_Demo/Introduction_Demo),
-      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo.  
-      The modules included in the introduction assume that the viewer has experience calling functions in the [Python](https://www.python.org/)
+      by visiting the <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_blank">Introduction Demo</a>,
+      where you'll find a series of widgets that simultaneously display and execute code being generated in each demo. The modules included in the introduction 
+      assume that the viewer has experience calling functions in the <a href="https://www.python.org/" target="_blank">Python</a>
       programming language. This is a newly created application that will continue to be updated. Links to my social
       media profiles are located towards the bottom this page if you'd like to contact me.
 
       With that being said, thank you for visiting and welcome! :smile:
 
-    """
+      </p>
+
+    """, unsafe_allow_html=True
   )
 
   st.divider()

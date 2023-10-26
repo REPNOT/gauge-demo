@@ -6,16 +6,35 @@ st.set_page_config(layout="wide")
 
 with st.sidebar:
 
-    image = Image.open('media/brand/D LOGO BLACK - 240 - NO BG.png')
-    st.image(image, use_column_width=False, width=120)
-    'www.techbyderek.com'
-    "https://github.com/REPNOT"
+    st.markdown(
+        """
+          <a href="https://www.techbyderek.com" target="_blank">
+            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
+          </a>
+          <br>
+          <br>
+        """, unsafe_allow_html=True
+    )
 
+    st.markdown(
+      """
+        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
+          <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="60" height="60">
+        </a>
+      """, unsafe_allow_html=True
+    )
+
+st.markdown(
 """
-    # Documentation
-    This page contains [Python](https://www.python.org/) code and JSON files for datasets used in each of the demonstration
+
+<h1>Documentation</h1>
+    <p>
+    This page contains <a href="https://www.python.org/" target="_blank">Python</a> code and JSON files for datasets used in each of the demonstration
     apps.  Visitors are welcomed to view, download, and utilize the files at their descretion.
-"""
+    </p>
+
+""", unsafe_allow_html=True
+)
 
 st.divider()
 
@@ -26,11 +45,17 @@ with col1:
     "## App Code"
 
     with st.expander("Plotly Stream Gauge Function"):
+        st.markdown(
         """
-        ## Plotly Stream Gauge Function
-        This section is the is the custom python function used throughout
-        the demonstration apps.
-        """
+
+        <h2>Documentation</h2>
+            <p>
+            This page contains <a href="https://www.python.org/" target="_blank">Python</a> code and JSON files for datasets used in each of the demonstration
+            apps.  Visitors are welcomed to view, download, and utilize the files at their descretion.
+            </p>
+
+        """, unsafe_allow_html=True
+        )
 
         functionCode = """
 

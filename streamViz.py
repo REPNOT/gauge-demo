@@ -5,7 +5,7 @@ import streamlit as st
 def gauge(gVal, gTitle="", gMode='gauge+number', gSize="MED",
           grLow=.29, grMid=.69, gcLow='#FF1708', gcMid='#FF9400', 
           gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
-          arBot=None, arTop=1, pTheme="streamlit", cWidth=False, sFix=None):
+          arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
 
     """Deploy Plotly gauge or indicator data visualization
 
