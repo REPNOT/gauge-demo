@@ -57,7 +57,6 @@ st.divider()
     selected, data will populate in various areas of the application that are blank by default when the application starts. 
 """
 
-
 st.divider()
 
 dataFile1 = 'elec_supply_dispos'
@@ -77,12 +76,17 @@ with st.sidebar:
         <p>Please make your selections below.</p>
         """, unsafe_allow_html=True
     )
+
+col1, col2 = st.columns(2)
+
+with col1:
     year_opt = st.selectbox(
         "Year", 
         options=rd_json_file(dataFileDir, dataFile1)['metadata']['years'],
         index=0
     )
 
+with col2:
     state_opt = st.selectbox(
         "State", 
         options=rd_json_file(dataFileDir, dataFile1)['metadata']['states'],
@@ -128,9 +132,9 @@ if year_opt:
 
 st.dataframe(main_df, use_container_width=True, hide_index=True)
 
-col1, col2, col3 = st.columns(3)
+col3, col4, col5 = st.columns(3)
 
-with col1:
+with col3:
     gauge(
         gaugeVal, 
         gMode='number+gauge',
@@ -139,7 +143,7 @@ with col1:
         cWidth=True, grLow=.90, 
         grMid=.95
     )
-with col2:
+with col4:
     gauge(
         tot_net_gen, 
         gMode='number',
@@ -148,7 +152,7 @@ with col2:
         cWidth=True, grLow=.90, 
         grMid=.95
     )
-with col3:
+with col5:
     gauge(
         tot_supply, 
         gTitle="Total Generation Supply",
