@@ -35,6 +35,10 @@ st.markdown(
             <a href="https://rev-gauge.streamlit.app/Documentation" target="_self">Documentation</a>
         </strong>
         &nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>
+            <a href="https://rev-gauge.streamlit.app/Video_Demo" target="_self">Video_Demo</a>
+        </strong>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
             <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="25" height="25">
         </a>
