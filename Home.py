@@ -88,7 +88,7 @@ def run():
       """, unsafe_allow_html=True
   )
 
-  video_file = open('media\Gauge_Viz_Demo\Gauge_Viz_Demo.mp4', 'rb')
+  video_file = open('media/Gauge_Viz_Demo/Gauge_Viz_Demo.mp4', 'rb')
   video_bytes = video_file.read()
 
   st.video(video_bytes)
