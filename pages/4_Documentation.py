@@ -301,6 +301,19 @@ with st.expander("Source Code - streamViz.py"):
     st.code(funcCode, language='python')
 
 
+"## Video Demo"
+
+with st.expander("Video Demo"):
+
+    """
+    ### Video Demo - Creating a Gauge Viz in a Local Dev Enviroment
+    """
+
+    video_file = open('media/Gauge_Viz_Demo/Gauge_Viz_Demo.mp4', 'rb')
+    video_bytes = video_file.read()
+    st.video(video_bytes)
+
+
 "## App Code"
 
 with st.expander("Introduction Demo"):
