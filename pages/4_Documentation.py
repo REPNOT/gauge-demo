@@ -112,7 +112,9 @@ with st.expander("Source Code - streamViz.py"):
                 width="medium"
             )
         },
-        hide_index=True)
+        hide_index=True,
+        use_container_width=True
+    )
     
     st.divider()
 
