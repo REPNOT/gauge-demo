@@ -8,43 +8,56 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-st.markdown(
-    """
-        <div>
-        <strong>
-            <a href="https://rev-gauge.streamlit.app" target="_self">Home</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">Introduction_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">Dashboard_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">Interactive_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">Automated_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Documentation" target="_self">Documentation</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <strong>
-            <a href="https://rev-gauge.streamlit.app/Video_Demo" target="_self">Video_Demo</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="25" height="25">
-        </a>
+with st.container():
+
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+
+    styleCSS = local_css("style/style.css")
+
+    st.markdown(f"""
+        <div class="tabs-menu">
+            <ul class="tabs-menu">
+                <li class="tabs-menu">
+                    <a class="tabs-menu"href="https://rev-gauge.streamlit.app" target="_self">
+                        Home
+                    </a>
+                </li class="tabs-menu">
+                <li class="tabs-menu">
+                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">
+                        Introduction Demo
+                    </a>
+                </li>
+                <li class="tabs-menu">
+                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">
+                        Dashboard Demo
+                    </a>
+                </li> 
+                <li class="tabs-menu">
+                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">
+                        Interactive Demo
+                    </a>
+                </li>
+                <li class="tabs-menu">
+                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">
+                        Automated Demo
+                    </a>
+                </li> 
+                <li class="tabs-menu">
+                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Documentation" target="_self">
+                        Documentation
+                    </a>
+                </li>
+                <li class="tabs-menu">
+                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Video_Demo" target="_self">
+                        Video Demo
+                    </a>
+                </li>
+            </ul>
         </div>
     """, unsafe_allow_html=True
-)
+    )
 
 st.markdown(
 """

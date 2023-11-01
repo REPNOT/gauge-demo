@@ -1,0 +1,70 @@
+
+
+div.tabs-menu {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: .1em solid rgba(00, 00, 00, 0.2);
+}
+
+ul.tabs-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+li.tabs-menu {
+    float: left;
+}
+
+a.tabs-menu {
+    text-align: center;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+}
+
+li.tabs-menu:hover {
+    border-bottom: .1em solid #FFFFFF;
+}
+
+a.tabs-menu {
+    font-weight: 400;
+    font-size: large;
+    color: black;
+}
+
+a.tabs-menu:link {
+    text-decoration: none;
+}
+
+a.tabs-menu:hover {
+    text-decoration: none;
+    font-weight:600;
+    border-top: .1em solid;
+    border-left: .1em solid;
+    border-right: .1em solid;
+    border-bottom: .5em solid #FFFFFF;
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+a.tabs-menu:visited {
+    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 5em;
+    text-decoration-thickness: .05em;
+}
+
+a.tabs-menu:active {
+    text-decoration: underline;
+    text-underline-offset: 5em;
+    text-decoration-thickness: .05em;
+    border-top: .15em solid;
+    border-left: .15em solid;
+    border-right: .15em solid;
+    font-weight:600;
+    color: blue;
+}
