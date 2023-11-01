@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Rev Gauge",
+    page_title="Stream Gauge",
     layout="wide",
     initial_sidebar_state="collapsed"
 )

@@ -2,8 +2,9 @@ from PIL import Image
 import streamlit as st
 from streamViz import gauge
 
+
 st.set_page_config(
-    page_title="Rev Gauge",
+    page_title="Stream Gauge",
     layout="wide",
     initial_sidebar_state="collapsed"
 )

@@ -7,11 +7,11 @@ LOGGER = get_logger(__name__)
 
 def run():
 
-  st.set_page_config(
-      page_title="Rev Gauge",
-      layout="wide",
-      initial_sidebar_state="collapsed"
-  )
+    st.set_page_config(
+        page_title="Stream Gauge",
+        layout="wide",
+        initial_sidebar_state="collapsed"
+    )
 
   with st.container():
 
