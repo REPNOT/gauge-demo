@@ -57,8 +57,6 @@ with st.container():
     """, unsafe_allow_html=True
     )
 
-st.divider()
-
 """
 # Video Demo - Creating a Gauge Visualization in a Local Dev Environment
 """
