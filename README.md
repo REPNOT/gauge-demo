@@ -10,7 +10,7 @@
     that helps developers quickly incorporate <a href="https://plotly.com/python/" target="_blank">Plotly</a> Gauge visualizations
     into their projects with the help of preset parameters. The application includes multiple
     demonstrations and interactive examples to help users become familiar with the module.  Additional information about the application, including
-    source code, dependencies, tools used for development, and parameters, can be found in the <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">documentation</a>
+    source code, dependencies, tools used for development, and parameters, can be found in the <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">documentation</a>
     section the site.
 </p>
 
@@ -25,7 +25,7 @@
 This dashboard application combines multiple [Plotly](https://plotly.com/python/) Indicator Gauge visualization's with several [Streamlit](https://streamlit.io/) components
 to present Annual Supply & Disposition of Electricity report data collected from the [U.S. Energy Information Administration's](https://www.eia.gov/)
 website using thier publicly available [API](https://www.eia.gov/opendata/).  The data use in this application is available
-for download in a JSON format on the [documentation](https://rev-gauge.streamlit.app/Documentation) page of this site.
+for download in a JSON format on the [documentation](https://stream-gauge.streamlit.app/Documentation) page of this site.
 
 # Interactive Demo
 <p>
@@ -42,7 +42,7 @@ for download in a JSON format on the [documentation](https://rev-gauge.streamlit
     random number generators can only be restarted by refreshing the browser or by back out of the page and then re-entering.
 </p>
 
-# Documentation [documentation](https://plotly-stream-gauge.streamlit.app/Documentation)
+# Documentation [documentation](https://stream-gauge.streamlit.app/Documentation)
 <p>
     This page contains <a href="https://www.python.org/" target="_blank">Python</a> code, JSON files for datasets used in the dashbaord demonstration,
     and additional documentation related to content presented throughout the application.  Visitors are welcomed to view, download, and utilize the files at their descretion.
