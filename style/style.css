@@ -53,6 +53,8 @@ footer {visibility: hidden;}
 header {visibility: hidden;}
 
 .footer {
+    text-align: center;
+    display: flex;
     justify-content: center;
+    overflow: hidden;
 }
-

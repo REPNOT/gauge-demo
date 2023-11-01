@@ -28,22 +28,22 @@ with st.container():
                 </li class="tabs-menu">
                 <li class="tabs-menu">
                     <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">
-                        Introduction Demo
+                        Introduction
                     </a>
                 </li>
                 <li class="tabs-menu">
                     <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">
-                        Dashboard Demo
+                        Dashboard
                     </a>
                 </li> 
                 <li class="tabs-menu">
                     <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">
-                        Interactive Demo
+                        Interactive
                     </a>
                 </li>
                 <li class="tabs-menu">
                     <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">
-                        Automated Demo
+                        Automated
                     </a>
                 </li> 
                 <li class="tabs-menu">
@@ -53,7 +53,7 @@ with st.container():
                 </li>
                 <li class="tabs-menu">
                     <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Video_Demo" target="_self">
-                        Video Demo
+                        Video
                     </a>
                 </li>
             </ul>
