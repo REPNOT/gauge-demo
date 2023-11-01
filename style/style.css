@@ -65,3 +65,8 @@ a.tabs-menu:active {
     font-weight:600;
     color: blue;
 }
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
