@@ -21,37 +21,37 @@ with st.container():
         <div class="tabs-menu">
             <ul class="tabs-menu">
                 <li class="tabs-menu">
-                    <a class="tabs-menu"href="https://rev-gauge.streamlit.app" target="_self">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self">
                         Home
                     </a>
                 </li class="tabs-menu">
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Introduction_Demo" target="_self">
                         Introduction
                     </a>
                 </li>
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Dashboard_Demo" target="_self">
                         Dashboard
                     </a>
                 </li> 
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Interactive_Demo" target="_self">
                         Interactive
                     </a>
                 </li>
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Automated_Demo" target="_self">
                         Automated
                     </a>
                 </li> 
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Documentation" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Documentation" target="_self">
                         Documentation
                     </a>
                 </li>
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Video_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Video_Demo" target="_self">
                         Video
                     </a>
                 </li>
@@ -82,7 +82,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
         """
 
         <h3>Adding a gauge with required value</h3>
-        <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
+        <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
         <br><br>
 
         """, unsafe_allow_html=True
@@ -128,7 +128,7 @@ with st.expander('Example 2 - Resizing the Gauge'):
         """
 
         <h3>Resizing the gauge using the preset options</h3>
-        <a href="https://rev-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
+        <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
         <br><br>
 
         """, unsafe_allow_html=True
@@ -194,7 +194,7 @@ with st.expander('Example 3 - Create a Gauge Title'):
 
     """
         ### Assigning a title to the gauge using a variable
-        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+        [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
     """
 
     __YOUR_TITLE__ = st.text_input('Gauge Title', key='8', placeholder="Enter a gauge title here...")
@@ -211,7 +211,7 @@ with st.expander('Example 4 - Convert to Percentage'):
 
     """
         ### Change the primary display value shown in the gauge using a toggle switch.
-        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+        [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
     """
 
     _toggle_1 = st.toggle('Display Gauge Value as %', key='9')
@@ -235,7 +235,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
 
     """
         ### Modifying the gauge display type using preset options and customize the color theme.
-        [Access streamViz Code in App Documentation](https://rev-gauge.streamlit.app/Documentation)
+        [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
     """
 
     col1, col2, col3 = st.columns(3)

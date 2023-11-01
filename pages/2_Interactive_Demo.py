@@ -20,37 +20,37 @@ with st.container():
         <div class="tabs-menu">
             <ul class="tabs-menu">
                 <li class="tabs-menu">
-                    <a class="tabs-menu"href="https://rev-gauge.streamlit.app" target="_self">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self">
                         Home
                     </a>
                 </li class="tabs-menu">
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Introduction_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Introduction_Demo" target="_self">
                         Introduction
                     </a>
                 </li>
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Dashboard_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Dashboard_Demo" target="_self">
                         Dashboard
                     </a>
                 </li> 
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Interactive_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Interactive_Demo" target="_self">
                         Interactive
                     </a>
                 </li>
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Automated_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Automated_Demo" target="_self">
                         Automated
                     </a>
                 </li> 
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Documentation" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Documentation" target="_self">
                         Documentation
                     </a>
                 </li>
                 <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://rev-gauge.streamlit.app/Video_Demo" target="_self">
+                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Video_Demo" target="_self">
                         Video
                     </a>
                 </li>
