@@ -153,14 +153,10 @@ st.divider()
 
 st.markdown(
     """
-    <div>
-    <a href="https://www.techbyderek.com" target="_blank">
-        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e923c91b6d9a5dde3b05c73096cf3e1d7f33b531/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="80">
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-        <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/2e2ac936dc7ba38079485323bafed43346988a1a/github-mark.svg" width="50" height="50">
-    </a>
+    <div class="footer">
+        <a href="https://www.techbyderek.com" target="_blank">
+            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e99e166a8b07f2460707bf8984b260d0945ba78a/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
+        </a>
     </div>
     """, unsafe_allow_html=True
 )
