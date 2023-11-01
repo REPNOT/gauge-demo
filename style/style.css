@@ -32,7 +32,7 @@ a.tabs-menu {
     color: black;
 }
 
-a.tabs-menu:link {
+a.tabs-menu:link, a.tabs-menu:visited {
     text-decoration: none;
 }
 
@@ -48,25 +48,11 @@ a.tabs-menu:hover {
     background-color: rgba(211, 211, 211, 0.7);
 }
 
-a.tabs-menu:visited {
-    text-decoration: none;
-    text-decoration: underline;
-    text-underline-offset: 5em;
-    text-decoration-thickness: .05em;
-}
-
-a.tabs-menu:active {
-    text-decoration: underline;
-    text-underline-offset: 5em;
-    text-decoration-thickness: .05em;
-    border-top: .15em solid;
-    border-left: .15em solid;
-    border-right: .15em solid;
-    font-weight:600;
-    color: blue;
-}
-
-/* Hide Streamlit Branding */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
+
+.footer {
+    justify-content: center;
+}
+
