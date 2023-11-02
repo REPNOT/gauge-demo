@@ -58,3 +58,9 @@ header {visibility: hidden;}
     justify-content: center;
     overflow: hidden;
 }
+
+[data-testid="stColorBlock"] {
+    width: 150px;
+    height: 38px;
+    margin-right: .25em;
+}

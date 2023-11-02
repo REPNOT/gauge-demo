@@ -239,33 +239,51 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
     """
 
     col1, col2, col3 = st.columns(3)
+    col7, col8, col9, col10, col11, col12, col13, col14, col15 = st.columns(9)
 
     with col1:
 
-        gauge_value = st.number_input('Gauge Value', value=0, key='11', min_value=0, max_value=100)
-
-        try:
-            low_color = st.color_picker('Pick High Gauge Color', '#FF1708')
-        except:
-            low_color = '#FF1708'
+        gauge_value = st.number_input(
+            'Gauge Value', value=0, key='11', 
+            min_value=0, max_value=100
+        )
 
     with col2:
 
-        low_range = st.number_input('Low Gauge Range', value=29, key='13', min_value=0, max_value=100)
-
-        try:
-            mid_color = st.color_picker('Pick High Gauge Color', '#FF9400')
-        except:
-            mid_color = '#FF9400'
+        low_range = st.number_input(
+            'Low Gauge Range', value=29, key='13', 
+            min_value=0, max_value=100
+        )
 
     with col3:
 
-        mid_range = st.number_input('Mid Gauge Range', value=69, key='15', min_value=0, max_value=100)
+        mid_range = st.number_input(
+            'Mid Gauge Range', value=69, 
+            key='15', min_value=0, max_value=100
+        )
 
-        try:
-            high_color = st.color_picker('Pick High Gauge Color', '#1B8720')
-        except:
-            high_color = '#1B8720'
+
+    with col7:
+        lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
+    with col8:
+        low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
+    with col9:
+        st.write(" ")
+
+    with col10:
+        mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
+    with col11:
+        mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
+    with col12:
+        st.write(" ")
+
+    with col13:
+        hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
+    with col14:
+        high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
+    with col15:
+        st.write(" ")
+
 
     with st.echo(code_location="above"):
 
