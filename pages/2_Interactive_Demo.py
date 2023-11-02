@@ -168,9 +168,9 @@ gauge(
     gMode=mode_val, 
     gSize=gauge_size, 
     sFix=suffix_toggle,
-    gcLow=low_range_color, 
-    gcMid=mid_range_color, 
-    gcHigh=high_range_color
+    gcLow=low_color, 
+    gcMid=mid_color, 
+    gcHigh=high_color
 )
 
 st.divider()
