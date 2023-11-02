@@ -73,7 +73,6 @@ st.divider()
 
 with st.expander("Gauge Settings"):
 
-
     col1, col2 = st.columns(2)
 
     with col1:
@@ -104,20 +103,23 @@ with st.expander("Gauge Settings"):
     with col10:
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
 
-    col14, col15 = st.columns(2)
 
-    with col14:
-        gauge_size = st.selectbox(
-            "Gauge Size",
-            ("SML", "MED", "LRG", "FULL"),
-            index=3
-        )
-    with col15:
-        gMode_option = st.selectbox(
-            "Display Mode",
-            ("Gauge Only", "Gauge & Value", "Value Only"),
-            index=1
-        )
+    with st.container():
+        
+        col14, col15 = st.columns(2)
+
+        with col14:
+            gauge_size = st.selectbox(
+                "Gauge Size",
+                ("SML", "MED", "LRG", "FULL"),
+                index=3
+            )
+        with col15:
+            gMode_option = st.selectbox(
+                "Display Mode",
+                ("Gauge Only", "Gauge & Value", "Value Only"),
+                index=1
+            )
 
 if gMode_option == "Gauge Only":
     mode_val = "gauge"
