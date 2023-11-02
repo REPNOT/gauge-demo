@@ -74,7 +74,7 @@ st.divider()
 with st.expander("Gauge Settings"):
 
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     with col1:
         sFix_Toggle = st.toggle('Display value as %')
@@ -83,46 +83,31 @@ with st.expander("Gauge Settings"):
         else:
             suffix_toggle = None
     with col2:
-        color_Toggle = st.toggle('Modify Gauge Colors')
-        if color_Toggle:
-            color_opt = False
-        else:
-            color_opt = True
-    with col3:
         st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
 
-    col5, col6, col7 = st.columns(3)
-    col8, col9, col10 = st.columns(3)
-    col11, col12, col13 = st.columns(3)
+    col3, col4, col5 = st.columns(3)
+    col6, col7, col8 = st.columns(3)
+    col9, col10, col11 = st.columns(3)
 
-    # with col5:
-    #     low_range_color = st.text_input('Low', '#FF1708', key=1, disabled=color_opt)
-
-    # with col6:
-    #     mid_range_color = st.text_input('Mid', '#FF9400', key=2, disabled=color_opt)
-    # with col7:
-    #     high_range_color = st.text_input('High', '#1B8720', key=3, disabled=color_opt)
-
-
-    with col5:
+    with col3:
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
-    with col6:
+    with col4:
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
-    with col7:
+    with col5:
         st.write(" ")
 
-    with col8:
+    with col6:
         mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
-    with col9:
+    with col7:
         mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-    with col10:
+    with col8:
         st.write(" ")
 
-    with col11:
+    with col9:
         hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
-    with col12:
+    with col10:
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
-    with col13:
+    with col11:
         st.write(" ")
 
     col14, col15 = st.columns(2)
