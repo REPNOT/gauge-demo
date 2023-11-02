@@ -81,7 +81,7 @@ with st.expander("Gauge Settings"):
             suffix_toggle = "%"
         else:
             st.write(" ")
-            suffix_toggle = None
+        suffix_toggle = None
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
 
