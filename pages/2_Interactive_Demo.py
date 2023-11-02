@@ -71,11 +71,11 @@ st.markdown(
 
 st.divider()
 
-with st.expander("Color Settings"):
+with st.expander("Gauge Settings"):
 
-    col4, col5 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-    with col4:
+    with col1:
 
         gauge_size = st.selectbox(
             "Gauge Size",
@@ -83,7 +83,7 @@ with st.expander("Color Settings"):
             index=3
         )
 
-    with col5:
+    with col2:
 
         gMode_option = st.selectbox(
             "Display Mode",
@@ -91,19 +91,17 @@ with st.expander("Color Settings"):
             index=1
         )
 
-    col1, col2, col3 = st.columns(3)
+    col3, col4, col5 = st.columns(3)
 
-    with col1:
+    with col3:
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
-    with col2:
+    with col4:
         mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
         mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-    with col3:
+    with col5:
         hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
-
-
 
 
 st.write(" Adjust slider to change gauge value")
