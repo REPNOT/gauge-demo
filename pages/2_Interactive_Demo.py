@@ -86,7 +86,7 @@ with st.expander("Color Settings"):
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
 
 
-col4, col5 = st.columns(2)
+col4, col5, col6 = st.columns(3)
 
 with col4:
 
@@ -96,11 +96,6 @@ with col4:
         index=3
     )
 
-    sFix_Toggle = st.toggle('Display value as %')
-    if sFix_Toggle:
-        suffix_toggle = "%"
-    else:
-        suffix_toggle = None
 
 with col5:
 
@@ -122,6 +117,14 @@ with col5:
             0.85, 0.9, 0.95, 1
         ]
     )
+
+with col6:
+
+    sFix_Toggle = st.toggle('Display value as %')
+    if sFix_Toggle:
+        suffix_toggle = "%"
+    else:
+        suffix_toggle = None
 
 
 if gMode_option == "Gauge Only":
