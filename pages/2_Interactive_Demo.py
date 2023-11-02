@@ -71,33 +71,33 @@ st.markdown(
 
 st.divider()
 
-with st.expander("Gauge Settings"):
+with st.expander("Color Settings"):
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-
-        st.write(" ")
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
-
     with col2:
-        gauge_size = st.selectbox(
-            "Gauge Size",
-            ("SML", "MED", "LRG", "FULL"),
-            index=3
-        )
         mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
         mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-
     with col3:
-        gMode_option = st.selectbox(
-            "Display Mode",
-            ("Gauge Only", "Gauge & Value", "Value Only"),
-            index=1
-        )
         hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
+
+
+gauge_size = st.selectbox(
+    "Gauge Size",
+    ("SML", "MED", "LRG", "FULL"),
+    index=3
+)
+
+gMode_option = st.selectbox(
+    "Display Mode",
+    ("Gauge Only", "Gauge & Value", "Value Only"),
+    index=1
+)
+
 
 if gMode_option == "Gauge Only":
     mode_val = "gauge"
@@ -107,6 +107,7 @@ elif gMode_option == "Gauge & Value":
     mode_val = "number+gauge"
 else:
     mode_val = "number+gauge"
+
 
 sFix_Toggle = st.toggle('Display value as %')
 if sFix_Toggle:
