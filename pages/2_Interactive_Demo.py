@@ -73,18 +73,6 @@ st.divider()
 
 with st.expander("Color Settings"):
 
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
-        low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
-    with col2:
-        mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
-        mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-    with col3:
-        hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
-        high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
-
     col4, col5 = st.columns(2)
 
     with col4:
@@ -102,6 +90,20 @@ with st.expander("Color Settings"):
             ("Gauge Only", "Gauge & Value", "Value Only"),
             index=1
         )
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
+        low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
+    with col2:
+        mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
+        mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
+    with col3:
+        hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
+        high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
+
+
 
 
 st.write(" Adjust slider to change gauge value")
