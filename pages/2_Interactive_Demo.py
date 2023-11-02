@@ -85,24 +85,23 @@ with st.expander("Color Settings"):
         hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
 
+    col4, col5 = st.columns(2)
 
-col4, col5 = st.columns(2)
+    with col4:
 
-with col4:
+        gauge_size = st.selectbox(
+            "Gauge Size",
+            ("SML", "MED", "LRG", "FULL"),
+            index=3
+        )
 
-    gauge_size = st.selectbox(
-        "Gauge Size",
-        ("SML", "MED", "LRG", "FULL"),
-        index=3
-    )
+    with col5:
 
-with col5:
-
-    gMode_option = st.selectbox(
-        "Display Mode",
-        ("Gauge Only", "Gauge & Value", "Value Only"),
-        index=1
-    )
+        gMode_option = st.selectbox(
+            "Display Mode",
+            ("Gauge Only", "Gauge & Value", "Value Only"),
+            index=1
+        )
 
 
 st.write(" Adjust slider to change gauge value")
