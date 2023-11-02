@@ -86,17 +86,42 @@ with st.expander("Color Settings"):
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
 
 
-gauge_size = st.selectbox(
-    "Gauge Size",
-    ("SML", "MED", "LRG", "FULL"),
-    index=3
-)
+col4, col5 = st.columns(2)
 
-gMode_option = st.selectbox(
-    "Display Mode",
-    ("Gauge Only", "Gauge & Value", "Value Only"),
-    index=1
-)
+with col4:
+
+    gauge_size = st.selectbox(
+        "Gauge Size",
+        ("SML", "MED", "LRG", "FULL"),
+        index=3
+    )
+
+    sFix_Toggle = st.toggle('Display value as %')
+    if sFix_Toggle:
+        suffix_toggle = "%"
+    else:
+        suffix_toggle = None
+
+with col5:
+
+    gMode_option = st.selectbox(
+        "Display Mode",
+        ("Gauge Only", "Gauge & Value", "Value Only"),
+        index=1
+    )
+
+    st.write(" Adjust slider to change gauge value")
+    gauge_value = st.select_slider(
+        'Use slider to adjust gauge value',
+        label_visibility="collapsed",
+        options =[
+            0.0, 0.05, 0.1, 0.15, 0.2,
+            0.25, 0.3, 0.35, 0.4,
+            0.45, 0.5, 0.55, 0.6,
+            0.65, 0.7, 0.75, 0.8,
+            0.85, 0.9, 0.95, 1
+        ]
+    )
 
 
 if gMode_option == "Gauge Only":
@@ -108,25 +133,6 @@ elif gMode_option == "Gauge & Value":
 else:
     mode_val = "number+gauge"
 
-
-sFix_Toggle = st.toggle('Display value as %')
-if sFix_Toggle:
-    suffix_toggle = "%"
-else:
-    suffix_toggle = None
-
-st.write(" Adjust slider to change gauge value")
-gauge_value = st.select_slider(
-    'Use slider to adjust gauge value',
-    label_visibility="collapsed",
-    options =[
-        0.0, 0.05, 0.1, 0.15, 0.2,
-        0.25, 0.3, 0.35, 0.4,
-        0.45, 0.5, 0.55, 0.6,
-        0.65, 0.7, 0.75, 0.8,
-        0.85, 0.9, 0.95, 1
-    ]
-)
 
 gauge(
     gauge_value, 
