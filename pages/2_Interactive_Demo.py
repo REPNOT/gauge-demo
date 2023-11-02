@@ -85,30 +85,24 @@ with st.expander("Gauge Settings"):
     with col2:
         st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
 
-    col3, col4, col5 = st.columns(3)
-    col6, col7, col8 = st.columns(3)
-    col9, col10, col11 = st.columns(3)
+    col3, col4, col5 = st.columns(2)
+    col6, col7, col8 = st.columns(2)
+    col9, col10, col11 = st.columns(2)
 
     with col3:
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
     with col4:
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
-    with col5:
-        st.write(" ")
 
     with col6:
         mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
     with col7:
         mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-    with col8:
-        st.write(" ")
 
     with col9:
         hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
     with col10:
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
-    with col11:
-        st.write(" ")
 
     col14, col15 = st.columns(2)
 
