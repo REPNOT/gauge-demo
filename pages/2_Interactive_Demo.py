@@ -105,26 +105,18 @@ with col5:
         index=1
     )
 
-    st.write(" Adjust slider to change gauge value")
-    gauge_value = st.select_slider(
-        'Use slider to adjust gauge value',
-        label_visibility="collapsed",
-        options =[
-            0.0, 0.05, 0.1, 0.15, 0.2,
-            0.25, 0.3, 0.35, 0.4,
-            0.45, 0.5, 0.55, 0.6,
-            0.65, 0.7, 0.75, 0.8,
-            0.85, 0.9, 0.95, 1
-        ]
-    )
-
-with col6:
-
-    sFix_Toggle = st.toggle('Display value as %')
-    if sFix_Toggle:
-        suffix_toggle = "%"
-    else:
-        suffix_toggle = None
+st.write(" Adjust slider to change gauge value")
+gauge_value = st.select_slider(
+    'Use slider to adjust gauge value',
+    label_visibility="collapsed",
+    options =[
+        0.0, 0.05, 0.1, 0.15, 0.2,
+        0.25, 0.3, 0.35, 0.4,
+        0.45, 0.5, 0.55, 0.6,
+        0.65, 0.7, 0.75, 0.8,
+        0.85, 0.9, 0.95, 1
+    ]
+)
 
 
 if gMode_option == "Gauge Only":
@@ -141,8 +133,7 @@ gauge(
     gauge_value, 
     gTitle="Indicator Gauge", 
     gMode=mode_val, 
-    gSize=gauge_size, 
-    sFix=suffix_toggle,
+    gSize=gauge_size,
     gcLow=low_color, 
     gcMid=mid_color, 
     gcHigh=high_color
