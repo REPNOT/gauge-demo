@@ -245,7 +245,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
         gauge_value = st.number_input('Gauge Value', value=0, key='11', min_value=0, max_value=100)
 
         try:
-            low_color = st.text_input('Low Gauge Color', '#FF1708', key='12')
+            low_color = st.color_picker('Pick High Gauge Color', '#FF1708')
         except:
             low_color = '#FF1708'
 
@@ -254,7 +254,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
         low_range = st.number_input('Low Gauge Range', value=29, key='13', min_value=0, max_value=100)
 
         try:
-            mid_color = st.text_input('Mid Gauge Color', '#FF9400', key='14')
+            mid_color = st.color_picker('Pick High Gauge Color', '#FF9400')
         except:
             mid_color = '#FF9400'
 
@@ -263,7 +263,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
         mid_range = st.number_input('Mid Gauge Range', value=69, key='15', min_value=0, max_value=100)
 
         try:
-            high_color = st.text_input('High Gauge Color', '#1B8720', key='16')
+            high_color = st.color_picker('Pick High Gauge Color', '#1B8720')
         except:
             high_color = '#1B8720'
 
