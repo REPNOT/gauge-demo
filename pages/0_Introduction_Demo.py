@@ -239,7 +239,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
     """
 
     col1, col2, col3 = st.columns(3)
-    col7, col8, col9, col10, col11, col12, col13, col14, col15 = st.columns(9)
+    col4, col5, col6, col7, col8, col9, col10, col11, col12 = st.columns(9)
 
     with col1:
 
@@ -263,25 +263,25 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
         )
 
 
-    with col7:
+    with col4:
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
-    with col8:
+    with col5:
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
+    with col6:
+        st.write(" ")
+
+    with col7:
+        mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
+    with col8:
+        mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
     with col9:
         st.write(" ")
 
     with col10:
-        mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
-    with col11:
-        mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-    with col12:
-        st.write(" ")
-
-    with col13:
         hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
-    with col14:
+    with col11:
         high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
-    with col15:
+    with col12:
         st.write(" ")
 
 
