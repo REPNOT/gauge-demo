@@ -76,11 +76,7 @@ with st.expander("Gauge Settings"):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        sFix_Toggle = st.toggle('Display value as %')
-        if sFix_Toggle:
-            suffix_toggle = "%"
-        else:
-            suffix_toggle = None
+
         st.write(" ")
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
         low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
@@ -111,6 +107,12 @@ elif gMode_option == "Gauge & Value":
     mode_val = "number+gauge"
 else:
     mode_val = "number+gauge"
+
+sFix_Toggle = st.toggle('Display value as %')
+if sFix_Toggle:
+    suffix_toggle = "%"
+else:
+    suffix_toggle = None
 
 st.write(" Adjust slider to change gauge value")
 gauge_value = st.select_slider(
