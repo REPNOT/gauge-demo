@@ -85,9 +85,9 @@ with st.expander("Gauge Settings"):
     with col2:
         st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
 
-    col3, col4, col5 = st.columns(2)
-    col6, col7, col8 = st.columns(2)
-    col9, col10, col11 = st.columns(2)
+    col3, col4 = st.columns(2)
+    col6, col7 = st.columns(2)
+    col9, col10 = st.columns(2)
 
     with col3:
         lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
