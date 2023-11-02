@@ -73,7 +73,7 @@ st.divider()
 
 with st.expander("Gauge Settings"):
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         sFix_Toggle = st.toggle('Display value as %')
@@ -81,43 +81,39 @@ with st.expander("Gauge Settings"):
             suffix_toggle = "%"
         else:
             suffix_toggle = None
+
     with col2:
-        st.write("For color options, check out [Adobe Color](https://color.adobe.com/explore)!")
+        gauge_size = st.selectbox(
+            "Gauge Size",
+            ("SML", "MED", "LRG", "FULL"),
+            index=3
+        )
+
+    with col3:
+        gMode_option = st.selectbox(
+            "Display Mode",
+            ("Gauge Only", "Gauge & Value", "Value Only"),
+            index=1
+        )
 
 
-    with st.container():
 
-        col3, col4 = st.columns(2)
-        col6, col7 = st.columns(2)
-        col9, col10 = st.columns(2)
+        # col3, col4 = st.columns(2)
+        # col6, col7 = st.columns(2)
+        # col9, col10 = st.columns(2)
 
-        with col3:
-            lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
-            low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
-        with col4:
-            mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
-            mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
-        with col6:
-            hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
-            high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
+        # with col3:
+        #     lColor = st.color_picker('Pick a Color - Low Range', '#FF1708')
+        #     low_color = st.text_input('Color Selection - Low Range', lColor, disabled=True)
+        # with col4:
+        #     mColor = st.color_picker('Pick a Color - Mid Range', '#FF9400')
+        #     mid_color = st.text_input('Color Selection - Mid Range', mColor, disabled=True)
+        # with col6:
+        #     hColor = st.color_picker('Pick a Color - High Range', '#1B8720')
+        #     high_color = st.text_input("Color Selection - High Range", hColor, disabled=True)
 
 
-    with st.container():
 
-        col14, col15 = st.columns(2)
-
-        with col14:
-            gauge_size = st.selectbox(
-                "Gauge Size",
-                ("SML", "MED", "LRG", "FULL"),
-                index=3
-            )
-        with col15:
-            gMode_option = st.selectbox(
-                "Display Mode",
-                ("Gauge Only", "Gauge & Value", "Value Only"),
-                index=1
-            )
 
 if gMode_option == "Gauge Only":
     mode_val = "gauge"
