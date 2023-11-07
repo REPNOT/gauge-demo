@@ -1,5 +1,5 @@
 import streamlit as st
-from streamViz import gauge
+import streamviz
 from random import random
 import time
 
@@ -69,12 +69,13 @@ st.markdown(
     """
 
         <p>
-
-        This application utilizes random number generators and the <a href="https://docs.streamlit.io/library/api-reference/control-flow/st.rerun" target="_blank">st.run</a> feature to produce 
-        effects comparable to a live data stream and is intended to showcase <a href="https://streamlit.io/" target="_blank">Streamlit's</a> capabilities.  The application can be
-        stopped at any time by pressing the stop button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the
-        random number generators can only be restarted by refreshing the browser or by back out of the page and then re-entering.
-
+            This application utilizes random number generators and the 
+            <a href="https://docs.streamlit.io/library/api-reference/control-flow/st.rerun" target="_blank">st.run</a> 
+            feature to produce effects comparable to a live data stream and is intended to showcase 
+            <a href="https://streamlit.io/" target="_blank">Streamlit's</a> capabilities.  The application can be
+            stopped at any time by pressing the stop button located in the sidebar menu to stop the application 
+            or navigate to another page.  Once stopped, the random number generators can only be restarted by 
+            refreshing the browser or by back out of the page and then re-entering.
         </p>
 
     """, unsafe_allow_html=True
@@ -82,7 +83,12 @@ st.markdown(
 
 st.divider()
 
-gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
+streamviz.gauge(
+    random(), 
+    gSize="LRG", 
+    gMode="number+gauge", 
+    cWidth=True
+)
 
 if st.button('STOP', type="primary", use_container_width=True):
     st.stop()
@@ -100,5 +106,5 @@ st.markdown(
 )
 
 for count in range(1, 20):
-    time.sleep(.95)
+    time.sleep(1.25)
     st.rerun()
