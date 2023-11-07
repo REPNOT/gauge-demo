@@ -75,16 +75,13 @@ st.divider()
 
 "## Source Code"
 
-with st.expander("Source Code - streamViz.py"):
+with st.expander("Source Code - streamviz"):
     st.markdown(
     """
-    <h2>streamViz.py</h2>
+    <h2>streamviz</h2>
     <p>
-        The code provided below can be copied and used in any Streamlit application to deploy
-        gauge visualizations used throughout this demonstration app.  Use of this function requires
-        the installation of Plotly & Streamlit libraries.  Procedures for installing required
-        dependencies vary by operating system, I would recommend doing some research for anyone
-        who is unfamiliar with the process.
+        The following code is now publicly available and can be downloaded directly from the <a href="https://pypi.org/project/streamviz/" target="_blank">Python Package Index</a> and
+        the source code can be viewed on GitHub.  For more information on about using this module, please view the <a href="https://stream-gauge.streamlit.app/Video_Demo" target="_blank">Demonstration Video</a>.
     </p>
     <h3>Function Parameters</h3>
     """, unsafe_allow_html=True
