@@ -74,7 +74,7 @@ st.markdown(
             feature to produce effects comparable to a live data stream and is intended to showcase 
             <a href="https://streamlit.io/" target="_blank">Streamlit's</a> capabilities.  The application can be
             stopped at any time by pressing the stop button located at the bottom of the page.  Once stopped, the 
-            random number generators can only be restarted by refreshing the browser or by back out of the page and 
+            random number generators can only be restarted by refreshing the browser or by backing out of the page and 
             then re-entering.
         </p>
 
