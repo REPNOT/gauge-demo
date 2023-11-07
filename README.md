@@ -51,7 +51,7 @@ for download in a JSON format on the [documentation](https://stream-gauge.stream
 
 # Documentation [documentation](https://stream-gauge.streamlit.app/Documentation)
 <p>
-    This page contains <a href="https://www.python.org/" target="_blank">Python</a> code, JSON files for datasets used in the dashbaord demonstration,
+    This page contains source code, JSON files for datasets used in the dashbaord demonstration,
     and additional documentation related to content presented throughout the application.  Visitors are welcomed to view, download, and utilize the files at their descretion.
 </p>
 
