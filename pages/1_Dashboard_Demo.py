@@ -1,5 +1,5 @@
 import streamlit as st
-from streamViz import gauge
+import streamviz
 from streamOps import rd_json_file
 from streamOps import json_to_array
 from streamOps import clean_col_lst
@@ -141,7 +141,7 @@ st.dataframe(main_df, use_container_width=True, hide_index=True)
 col3, col4, col5 = st.columns(3)
 
 with col3:
-    gauge(
+    streamviz.gauge(
         gaugeVal, 
         gMode='number+gauge',
         gTitle="Total Net Generation / Total Supply",
@@ -150,7 +150,7 @@ with col3:
         grMid=.95
     )
 with col4:
-    gauge(
+    streamviz.gauge(
         tot_net_gen, 
         gMode='number',
         gTitle="Total Net Generation",
@@ -159,7 +159,7 @@ with col4:
         grMid=.95
     )
 with col5:
-    gauge(
+    streamviz.gauge(
         tot_supply, 
         gTitle="Total Generation Supply",
         gMode='number', 
