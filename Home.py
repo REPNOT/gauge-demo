@@ -70,12 +70,16 @@ def run():
             """
 
             <p>
-            A <a href="https://streamlit.io/" target="_blank">Streamlit</a> demonstration application for utilizing a custom <a href="https://www.python.org/" target="_blank">Python</a> module
-            that helps developers quickly incorporate <a href="https://plotly.com/python/" target="_blank">Plotly</a> Gauge visualizations
-            into their projects with the help of preset parameters. The application includes multiple
-            demonstrations and interactive examples to help users become familiar with the module.  Additional information about the application, including
-            source code, dependencies, tools used for development, and parameters, can be found in the <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">documentation</a>
-            section the site.
+                A <a href="https://streamlit.io/" target="_blank">Streamlit</a> demonstration application for 
+                the <a href="https://pypi.org/project/streamviz/" target="_blank">streamviz package</a> publicly 
+                available and distributed via the <a href="https://pypi.org" target="_blank">Python Package Index</a>.
+                The streamviz package helps developers quickly incorporate 
+                <a href="https://plotly.com/python/" target="_blank">Plotly</a> gauge indicator visualizations
+                into their projects with the help of preset parameters. This application provides multiple demonstrations 
+                and interactive examples to help users become familiar with streamviz.  Additional information about 
+                the application, including source code, dependencies, tools used for development, and parameters, can 
+                be found in the <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">documentation</a>
+                section the site.
             </p>
 
             """, unsafe_allow_html=True

@@ -1,6 +1,6 @@
 from PIL import Image
 import streamlit as st
-from streamViz import gauge
+import streamviz
 
 
 st.set_page_config(
@@ -82,7 +82,6 @@ with st.expander('Example 1 - Calling the Gauge Function'):
         """
 
         <h3>Adding a gauge with required value</h3>
-        <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
         <br><br>
 
         """, unsafe_allow_html=True
@@ -101,7 +100,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
         with st.echo(code_location="above"):
 
-            gauge(.23)
+            streamviz.gauge(.23)
 
         foo = 'bar'
 
@@ -109,7 +108,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
         with st.echo(code_location="above"):
 
-            gauge(.56)
+            streamviz.gauge(.56)
 
         foo = 'bar'
 
@@ -117,7 +116,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
         with st.echo(code_location="above"):
 
-            gauge(.89)
+            streamviz.gauge(.89)
 
         foo = 'bar'
 
@@ -128,7 +127,6 @@ with st.expander('Example 2 - Resizing the Gauge'):
         """
 
         <h3>Resizing the gauge using the preset options</h3>
-        <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
         <br><br>
 
         """, unsafe_allow_html=True
@@ -164,55 +162,63 @@ with st.expander('Example 2 - Resizing the Gauge'):
     if _button_1:
 
         with st.echo(code_location="above"):
-            gauge(.19, gSize="SML")
+            streamviz.gauge(.19, gSize="SML")
 
         foo = 'bar'
 
     if _button_2:
 
         with st.echo(code_location="above"):
-            gauge(.61, gSize="MED")
+            streamviz.gauge(.61, gSize="MED")
 
         foo = 'bar'
 
     if _button_3:
 
         with st.echo(code_location="above"):
-            gauge(.95, gSize="LRG")
+            streamviz.gauge(.95, gSize="LRG")
 
         foo = 'bar'
 
     if _button_4:
 
         with st.echo(code_location="above"):
-            gauge(.45, gSize="FULL")
+            streamviz.gauge(.45, gSize="FULL")
 
         foo = 'bar'
 
 
 with st.expander('Example 3 - Create a Gauge Title'):
 
-    """
-        ### Assigning a title to the gauge using a variable
-        [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
-    """
+    st.markdown(
+        """
+
+        <h3>Assigning a title to the gauge using a variable</h3>
+        <br><br>
+
+        """, unsafe_allow_html=True
+    )
 
     __YOUR_TITLE__ = st.text_input('Gauge Title', key='8', placeholder="Enter a gauge title here...")
 
     if __YOUR_TITLE__:
 
         with st.echo(code_location="above"):
-            gauge(.85, gSize="FULL", gTitle=__YOUR_TITLE__)
+            streamviz.gauge(.85, gSize="FULL", gTitle=__YOUR_TITLE__)
 
         foo = 'bar'
 
 
 with st.expander('Example 4 - Convert to Percentage'):
 
-    """
-        ### Change the primary display value shown in the gauge using a toggle switch.
-        [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
-    """
+    st.markdown(
+        """
+
+        <h3>Change the primary display value shown in the gauge using a toggle switch.</h3>
+        <br><br>
+
+        """, unsafe_allow_html=True
+    )
 
     _toggle_1 = st.toggle('Display Gauge Value as %', key='9')
 
@@ -226,17 +232,21 @@ with st.expander('Example 4 - Convert to Percentage'):
 
     with st.echo(code_location="above"):
 
-        gauge(.85, gSize="LRG", gTitle="Plotly Stream Gauge", sFix=toggle_value)
+        streamviz.gauge(.85, gSize="LRG", gTitle="Plotly Stream Gauge", sFix=toggle_value)
 
     foo = 'bar'
 
 
 with st.expander('Example 5 - Modify Gauge Type & Color'):
 
-    """
-        ### Modifying the gauge display type using preset options and customize the color theme.
-        [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
-    """
+    st.markdown(
+        """
+
+        <h3>Modifying the gauge display type using preset options and customize the color theme.</h3>
+        <br><br>
+
+        """, unsafe_allow_html=True
+    )
 
     col1, col2, col3 = st.columns(3)
     col4, col5, col6, col7, col8, col9, col10, col11, col12 = st.columns(9)
@@ -287,7 +297,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
 
     with st.echo(code_location="above"):
 
-        gauge(
+        streamviz.gauge(
             gVal=gauge_value, gSize="LRG", 
             gTitle="Plotly Stream Gauge", gMode="gauge+number",
             grLow=low_range, grMid=mid_range, gcLow=low_color, 
