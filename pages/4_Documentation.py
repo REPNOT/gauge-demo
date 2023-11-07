@@ -134,7 +134,7 @@ with st.expander("Source Code - streamviz"):
         import streamlit as st
 
 
-        def gauge(gVal, gTitle="", gMode='gauge+number', gSize="FULL", gTheme="Black",
+        def streamviz.gauge(gVal, gTitle="", gMode='gauge+number', gSize="FULL", gTheme="Black",
                 grLow=.29, grMid=.69, gcLow='#FF1708', gcMid='#FF9400', 
                 gcHigh='#1B8720', xpLeft=0, xpRight=1, ypBot=0, ypTop=1, 
                 arBot=None, arTop=1, pTheme="streamlit", cWidth=True, sFix=None):
@@ -329,7 +329,7 @@ with st.expander("Introduction Demo"):
 
         from PIL import Image
         import streamlit as st
-        from streamViz import gauge
+        import streamviz
 
         with st.expander('Example 1 - Calling the Gauge Function'):
 
@@ -356,7 +356,7 @@ with st.expander("Introduction Demo"):
 
                 with st.echo(code_location="above"):
 
-                    gauge(.23)
+                    streamviz.gauge(.23)
 
                 foo = 'bar'
 
@@ -364,7 +364,7 @@ with st.expander("Introduction Demo"):
 
                 with st.echo(code_location="above"):
 
-                    gauge(.56)
+                    streamviz.gauge(.56)
 
                 foo = 'bar'
 
@@ -372,7 +372,7 @@ with st.expander("Introduction Demo"):
 
                 with st.echo(code_location="above"):
 
-                    gauge(.89)
+                    streamviz.gauge(.89)
 
                 foo = 'bar'
 
@@ -419,28 +419,28 @@ with st.expander("Introduction Demo"):
             if _button_1:
 
                 with st.echo(code_location="above"):
-                    gauge(.19, gSize="SML")
+                    streamviz.gauge(.19, gSize="SML")
 
                 foo = 'bar'
 
             if _button_2:
 
                 with st.echo(code_location="above"):
-                    gauge(.61, gSize="MED")
+                    streamviz.gauge(.61, gSize="MED")
 
                 foo = 'bar'
 
             if _button_3:
 
                 with st.echo(code_location="above"):
-                    gauge(.95, gSize="LRG")
+                    streamviz.gauge(.95, gSize="LRG")
 
                 foo = 'bar'
 
             if _button_4:
 
                 with st.echo(code_location="above"):
-                    gauge(.45, gSize="FULL")
+                    streamviz.gauge(.45, gSize="FULL")
 
                 foo = 'bar'
 
@@ -457,7 +457,7 @@ with st.expander("Introduction Demo"):
             if __YOUR_TITLE__:
 
                 with st.echo(code_location="above"):
-                    gauge(.85, gSize="FULL", gTitle=__YOUR_TITLE__)
+                    streamviz.gauge(.85, gSize="FULL", gTitle=__YOUR_TITLE__)
 
                 foo = 'bar'
 
@@ -481,7 +481,7 @@ with st.expander("Introduction Demo"):
 
             with st.echo(code_location="above"):
 
-                gauge(.85, gSize="LRG", gTitle="Plotly Stream Gauge", sFix=toggle_value)
+                streamviz.gauge(.85, gSize="LRG", gTitle="Plotly Stream Gauge", sFix=toggle_value)
 
             foo = 'bar'
 
@@ -524,7 +524,7 @@ with st.expander("Introduction Demo"):
 
             with st.echo(code_location="above"):
 
-                gauge(
+                streamviz.gauge(
                     gVal=gauge_value, gSize="LRG", 
                     gTitle="Plotly Stream Gauge", gMode="gauge+number",
                     grLow=low_range, grMid=mid_range, gcLow=low_color, 
@@ -548,7 +548,7 @@ with st.expander("Data Reporting Demo"):
     reportCode = """
 
         import streamlit as st
-        from streamViz import gauge
+        import streamviz
         from streamOps import rd_json_file
         from streamOps import json_to_array
         from streamOps import clean_col_lst
@@ -621,7 +621,7 @@ with st.expander("Data Reporting Demo"):
         col3, col4, col5 = st.columns(3)
 
         with col3:
-            gauge(
+            streamviz.gauge(
                 gaugeVal, 
                 gMode='number+gauge',
                 gTitle="Total Net Generation / Total Supply",
@@ -630,7 +630,7 @@ with st.expander("Data Reporting Demo"):
                 grMid=.95
             )
         with col4:
-            gauge(
+            streamviz.gauge(
                 tot_net_gen, 
                 gMode='number',
                 gTitle="Total Net Generation",
@@ -639,7 +639,7 @@ with st.expander("Data Reporting Demo"):
                 grMid=.95
             )
         with col5:
-            gauge(
+            streamviz.gauge(
                 tot_supply, 
                 gTitle="Total Generation Supply",
                 gMode='number', 
@@ -679,7 +679,7 @@ with st.expander("Interactive Demo"):
     interCode = """
 
         import streamlit as st
-        from streamViz import gauge
+        import streamviz
 
         with st.expander("Gauge Settings"):
 
@@ -748,7 +748,7 @@ with st.expander("Interactive Demo"):
             ]
         )
 
-        gauge(
+        streamviz.gauge(
             gauge_value, 
             gTitle="Indicator Gauge", 
             gMode=mode_val, 
@@ -771,11 +771,11 @@ with st.expander("Automated Demo"):
 
     codeStr = """
         import streamlit as st
-        from streamViz import gauge
+        import streamviz
         from random import random
         import time
 
-        gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
+        streamviz.gauge(random(), gSize="LRG", gMode="number+gauge", cWidth=True)
 
         if st.button('STOP', type="primary", use_container_width=True):
             st.stop()
