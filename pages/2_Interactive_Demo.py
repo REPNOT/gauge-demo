@@ -1,5 +1,5 @@
 import streamlit as st
-from streamViz import gauge
+import streamviz
 
 
 st.set_page_config(
@@ -126,8 +126,7 @@ elif gMode_option == "Gauge & Value":
 else:
     mode_val = "number+gauge"
 
-
-gauge(
+streamviz.gauge(
     gauge_value, 
     gTitle="Indicator Gauge", 
     gMode=mode_val, 
