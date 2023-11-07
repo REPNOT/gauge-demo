@@ -20,30 +20,33 @@
 
 # Introduction Demo
 <p>
-    Each of the following tabs below display different examples for how to call the gauge function using different parameters to customize the visualization.
+    Each of the tabs below provide different examples utilizing the gauge function using different parameters to customize the visualization.
     Exapnding the tabs will reveal different input features used to interact with each demo, while also displaying and executing the code required to
     produce the gauge visualization.
 </p>
 
 # Dashboard Application Demo 
-This dashboard application combines multiple [Plotly](https://plotly.com/python/) Indicator Gauge visualization's with several [Streamlit](https://streamlit.io/) components
+This dashboard application combines multiple [Plotly](https://plotly.com/python/) indicator gauge visualization's with several [Streamlit](https://streamlit.io/) components
 to present Annual Supply & Disposition of Electricity report data collected from the [U.S. Energy Information Administration's](https://www.eia.gov/)
-website using thier publicly available [API](https://www.eia.gov/opendata/).  The data use in this application is available
+website using thier publicly available [API](https://www.eia.gov/opendata/).  The data used in this application is available
 for download in a JSON format on the [documentation](https://stream-gauge.streamlit.app/Documentation) page of this site.
+
 
 # Interactive Demo
 <p>
     This page provides a demonstration that allows viewers to directly interact with the gauge visualization, while also providing
-    a group of settings that can be used to customize the gauge.
+    a group of settings that can be used to customize the visualization.
 </p>
-
 
 # Automated Demo
 <p>
-    This application utilizes random number generators and the <a href="https://docs.streamlit.io/library/api-reference/control-flow/st.rerun" target="_blank">st.run</a> feature to produce 
-    effects comparable to a live data stream and is intended to showcase <a href="https://streamlit.io/" target="_blank">Streamlit's</a> capabilities.  The application can be
-    stopped at any time by pressing the stop button located in the sidebar menu to stop the application or navigate to another page.  Once stopped, the
-    random number generators can only be restarted by refreshing the browser or by back out of the page and then re-entering.
+    This application utilizes random number generators and the 
+    <a href="https://docs.streamlit.io/library/api-reference/control-flow/st.rerun" target="_blank">st.run</a> 
+    feature to produce effects comparable to a live data stream and is intended to showcase 
+    <a href="https://streamlit.io/" target="_blank">Streamlit's</a> capabilities.  The application can be
+    stopped at any time by pressing the stop button located at the bottom of the page.  Once stopped, the 
+    random number generators can only be restarted by refreshing the browser or by backing out of the page and 
+    then re-entering.
 </p>
 
 # Documentation [documentation](https://stream-gauge.streamlit.app/Documentation)
