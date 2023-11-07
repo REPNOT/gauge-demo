@@ -81,7 +81,7 @@ with st.expander("Source Code - streamviz"):
     <h2>streamviz</h2>
     <p>
         The following code is now publicly available and can be downloaded directly from the <a href="https://pypi.org/project/streamviz/" target="_blank">Python Package Index</a> and
-        the source code can be viewed on GitHub.  For more information on about using this module, please view the <a href="https://stream-gauge.streamlit.app/Video_Demo" target="_blank">Demonstration Video</a>.
+        the source code is available on <a href="https://github.com/REPNOT/streamviz" target="_blank">GitHub</a>.  For more information on about using this module, please view the <a href="https://stream-gauge.streamlit.app/Video_Demo" target="_blank">Demonstration Video</a>.
     </p>
     <h3>Function Parameters</h3>
     """, unsafe_allow_html=True
