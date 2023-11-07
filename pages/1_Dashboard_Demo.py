@@ -66,7 +66,7 @@ with st.container():
 
 """
     # Dashboard Application Demo 
-    This dashboard application combines multiple [Plotly](https://plotly.com/python/) Indicator Gauge visualization's with several [Streamlit](https://streamlit.io/) components
+    This dashboard application combines multiple [Plotly](https://plotly.com/python/) indicator gauge visualization's with several [Streamlit](https://streamlit.io/) components
     to present Annual Supply & Disposition of Electricity report data collected from the [U.S. Energy Information Administration's](https://www.eia.gov/)
     website using thier publicly available [API](https://www.eia.gov/opendata/).  The data use in this application is available
     for download in a JSON format on the [documentation](https://stream-gauge.streamlit.app/Documentation) page of this site.
