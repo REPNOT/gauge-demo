@@ -242,7 +242,7 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
     st.markdown(
         """
 
-        <h3>Modifying the gauge display type using preset options and customize the color theme.</h3>
+        <h3>Modifying the gauge display type using preset options and customizing the color theme.</h3>
         <br><br>
 
         """, unsafe_allow_html=True
