@@ -26,7 +26,7 @@ def run():
         components.html(
             """
 
-            <p>
+            <p style="margin-bottom:-2em;">
                 A <a href="https://streamlit.io/" target="_blank">Streamlit</a> demonstration application for 
                 the <a href="https://pypi.org/project/streamviz/" target="_blank">streamviz package</a> publicly 
                 available and distributed via the <a href="https://pypi.org" target="_blank">Python Package Index</a>.
