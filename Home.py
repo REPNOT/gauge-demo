@@ -10,7 +10,7 @@ def run():
     st.set_page_config(
         page_title="Stream Gauge",
         layout="wide",
-        initial_sidebar_state="collapsed"
+        initial_sidebar_state="expanded"
     )
 
     with st.container():
@@ -20,49 +20,6 @@ def run():
                 st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
         styleCSS = local_css("style/style.css")
-
-        components.html(f"""
-            <div class="tabs-menu" style="text-align: center;display: flex;justify-content: center;overflow: hidden;border-bottom: .1em solid rgba(00, 00, 00, 0.2);">
-                <ul class="tabs-menu" style="list-style-type: none;margin: 0;padding: 0;text-align: center;">
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Home
-                        </a>
-                    </li class="tabs-menu">
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Introduction
-                        </a>
-                    </li>
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Dashboard
-                        </a>
-                    </li> 
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Interactive
-                        </a>
-                    </li>
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Automated
-                        </a>
-                    </li> 
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Documentation
-                        </a>
-                    </li>
-                    <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
-                        <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
-                            Video
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        """
-        )
 
         st.write("# Plotly Indicator Gauge Demo App")
 
