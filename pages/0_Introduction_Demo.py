@@ -1,6 +1,7 @@
 from PIL import Image
 import streamlit as st
 import streamviz
+import streamlit.components.v1 as components
 
 
 st.set_page_config(
@@ -17,60 +18,62 @@ with st.container():
 
     styleCSS = local_css("style/style.css")
 
-    st.markdown(f"""
-        <div class="tabs-menu">
-            <ul class="tabs-menu">
-                <li class="tabs-menu">
-                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self">
+    components.html(f"""
+        <div class="tabs-menu" style="text-align: center;display: flex;justify-content: center;overflow: hidden;border-bottom: .1em solid rgba(00, 00, 00, 0.2);">
+            <ul class="tabs-menu" style="list-style-type: none;margin: 0;padding: 0;text-align: center;">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Home
                     </a>
                 </li class="tabs-menu">
-                <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Introduction_Demo" target="_self">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Introduction
                     </a>
                 </li>
-                <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Dashboard_Demo" target="_self">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Dashboard
                     </a>
                 </li> 
-                <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Interactive_Demo" target="_self">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Interactive
                     </a>
                 </li>
-                <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Automated_Demo" target="_self">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Automated
                     </a>
                 </li> 
-                <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Documentation" target="_self">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Documentation
                     </a>
                 </li>
-                <li class="tabs-menu">
-                    <a class="tabs-menu" href="https://stream-gauge.streamlit.app/Video_Demo" target="_self">
+                <li class="tabs-menu" style="float: left;margin-top: .6em;text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;">
+                    <a class="tabs-menu"href="https://stream-gauge.streamlit.app/" target="_self" style="text-align: center;padding-left: .7em;padding-right: .7em;padding-bottom: .6em;padding-top: .4em;font-weight: 600font-size: large;color: black;text-decoration: none;text-decoration: none;font-weight:bolder;border-top: .15em solid;border-left: .15em solid;border-right: .15em solid;border-bottom: .15em solid;border-top-left-radius: .2em;border-top-right-radius: .2em;background-color: rgba(211, 211, 211, 0.7);">
                         Video
                     </a>
                 </li>
             </ul>
         </div>
-    """, unsafe_allow_html=True
+    """
     )
+
+
 """
     # Introduction Demo
 """
 
-st.markdown(
+components.html(
     """
     <p>
         Each of the tabs below provide different examples utilizing the gauge function using different parameters to customize the visualization.
         Exapnding the tabs will reveal different input features used to interact with each demo, while also displaying and executing the code required to
         produce the gauge visualization.
     </p>
-    """, unsafe_allow_html=True
+    """
 )
 
 st.divider()
@@ -122,13 +125,13 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
 with st.expander('Example 2 - Resizing the Gauge'):
     
-    st.markdown(
+    components.html(
         """
 
         <h3>Resizing the gauge using the preset options</h3>
         <br><br>
 
-        """, unsafe_allow_html=True
+        """
     )
 
     col21, col22, col23, col24 = st.columns(4)
@@ -189,13 +192,13 @@ with st.expander('Example 2 - Resizing the Gauge'):
 
 with st.expander('Example 3 - Create a Gauge Title'):
 
-    st.markdown(
+    components.html(
         """
 
         <h3>Assigning a title to the gauge using a variable</h3>
         <br><br>
 
-        """, unsafe_allow_html=True
+        """
     )
 
     __YOUR_TITLE__ = st.text_input('Gauge Title', key='8', placeholder="Enter a gauge title here...")
@@ -210,13 +213,13 @@ with st.expander('Example 3 - Create a Gauge Title'):
 
 with st.expander('Example 4 - Convert to Percentage'):
 
-    st.markdown(
+    components.html(
         """
 
         <h3>Change the primary display value shown in the gauge using a toggle switch.</h3>
         <br><br>
 
-        """, unsafe_allow_html=True
+        """
     )
 
     _toggle_1 = st.toggle('Display Gauge Value as %', key='9')
@@ -305,14 +308,27 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
 
     foo = 'bar'
 
-st.divider()
+with st.container():
 
-st.markdown(
-    """
-    <div class="footer">
-        <a href="https://www.techbyderek.com" target="_blank">
-            <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e99e166a8b07f2460707bf8984b260d0945ba78a/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
-        </a>
-    </div>
-    """, unsafe_allow_html=True
-)
+    st.divider()
+
+    foot = components.html(f"""
+                           
+        <!DOCTYPE html>
+        <html lang="en">
+        <meta charset="UTF-8">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <body>
+
+        <div class=\"footer\" style="margin-left:auto;margin-right:auto;text-align:center;">
+            <a href=\"{"https://www.techbyderek.com"}\" target=\"_blank\">
+                <img src=\"{"https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e99e166a8b07f2460707bf8984b260d0945ba78a/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png"}\" width=\"100\">
+            </a>
+        </div>
+
+        </body>
+        </html>
+
+    """)

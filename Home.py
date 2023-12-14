@@ -66,7 +66,7 @@ def run():
 
         st.write("# Plotly Indicator Gauge Demo App")
 
-        st.markdown(
+        components.html(
             """
 
             <p>
@@ -82,30 +82,33 @@ def run():
                 section the site.
             </p>
 
-            """, unsafe_allow_html=True
+            """
         )
 
-    st.markdown(
-        """
-        <div>
-            <a href="https://github.com/REPNOT/gauge-demo" target="_blank">
-                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNuamZlbGg2ZHVqdnMweGl0cHdmOWU1Y3Y1cXIwdnF0anptdTh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aWYNvKMvwPVADwIM4i/giphy.gif">
-            </a>
-        </div>
-        """, unsafe_allow_html=True
-    )
+    with st.container():
 
-    st.divider()
+        st.divider()
 
-    st.markdown(
-        """
-        <div class="footer">
-            <a href="https://www.techbyderek.com" target="_blank">
-                <img src="https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e99e166a8b07f2460707bf8984b260d0945ba78a/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png" width="100">
-            </a>
-        </div>
-        """, unsafe_allow_html=True
-    )
+        foot = components.html(f"""
+                            
+            <!DOCTYPE html>
+            <html lang="en">
+            <meta charset="UTF-8">
+            <title>Page Title</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <link rel="stylesheet" href="style/style.css">
+            <body>
+
+            <div class=\"footer\" style="margin-left:auto;margin-right:auto;text-align:center;">
+                <a href=\"{"https://www.techbyderek.com"}\" target=\"_blank\">
+                    <img src=\"{"https://gist.githubusercontent.com/REPNOT/183759c1eec2736531dd923d8256a782/raw/e99e166a8b07f2460707bf8984b260d0945ba78a/D%2520LOGO%2520BLACK%2520-%2520240%2520-%2520NO%2520BG.png"}\" width=\"100\">
+                </a>
+            </div>
+
+            </body>
+            </html>
+
+        """)
 
 if __name__ == "__main__":
     run()
