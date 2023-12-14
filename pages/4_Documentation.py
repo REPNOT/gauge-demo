@@ -10,22 +10,13 @@ st.set_page_config(
 )
 
 
-with st.container():
-
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-    styleCSS = local_css("style/style.css")
-
-
-components.html(
+st.markdown(
 """
-    <h1>Documentation</h1>
-    <p>
-        This page contains source code, JSON files for datasets used in the dashbaord demonstration,
-        and additional documentation related to content presented throughout the application.  Visitors are welcomed to view, download, and utilize the files at their descretion.
-    </p>
+    # Documentation
+
+    This page contains source code, JSON files for datasets used in the dashbaord demonstration,
+    and additional documentation related to content presented throughout the application.  Visitors are welcomed to view, download, and utilize the files at their descretion.
+
 """
 )
 
@@ -36,17 +27,16 @@ st.divider()
 
 with st.expander("Source Code - streamviz"):
 
-    components.html(
+    st.markdown(
     """
-    <h2>streamviz</h2>
-    <p>
-        The following code is now publicly available and can be downloaded directly from the <a href="https://pypi.org/project/streamviz/" target="_blank">Python Package Index</a> and
-        the source code is available on <a href="https://github.com/REPNOT/streamviz" target="_blank">GitHub</a>.  For more information on about using this module, please view the <a href="https://stream-gauge.streamlit.app/Video_Demo" target="_blank">Demonstration Video</a>.
-    </p>
-    <p>
-        <a href="https://badge.fury.io/py/streamviz"><img src="https://badge.fury.io/py/streamviz.svg" alt="PyPI version" height="18"></a>
-    </p>
-    <h3>Function Parameters</h3>
+    ## streamviz
+
+        The following code is now publicly available and can be downloaded directly from the [Python Package Index](https://pypi.org/project/streamviz/) and
+        the source code is available on [GitHub](https://github.com/REPNOT/streamviz).  For more information on about using this module, please view the <a href="https://stream-gauge.streamlit.app/Video_Demo" target="_blank">Demonstration Video</a>.
+
+        [![](https://badge.fury.io/py/streamviz.svg)](https://badge.fury.io/py/streamviz)
+
+    ### Function Parameters
     """
     )
 

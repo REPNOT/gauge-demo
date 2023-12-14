@@ -9,21 +9,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-with st.container():
-
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-    styleCSS = local_css("style/style.css")
-
-components.html(
+st.markdown(
 """
-    <h1>Interactive Demo</h1>
-    <p>
-        This page provides a demonstration that allows viewers to directly interact with the gauge visualization, while also providing
-        a group of settings that can be used to customize the visualization.
-    </p>
+    # Interactive Demo
+
+    This page provides a demonstration that allows viewers to directly interact with the gauge visualization, while also providing
+    a group of settings that can be used to customize the visualization.
 """
 )
 

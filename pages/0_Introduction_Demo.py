@@ -10,26 +10,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-with st.container():
-
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-    styleCSS = local_css("style/style.css")
-
 
 """
     # Introduction Demo
 """
 
-components.html(
+st.markdown(
     """
-    <p>
         Each of the tabs below provide different examples utilizing the gauge function using different parameters to customize the visualization.
         Exapnding the tabs will reveal different input features used to interact with each demo, while also displaying and executing the code required to
         produce the gauge visualization.
-    </p>
     """
 )
 
@@ -39,11 +29,8 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
     st.markdown(
         """
-
-        <h3>Adding a gauge with required value</h3>
-        <br><br>
-
-        """, unsafe_allow_html=True
+        ### Adding a gauge with required value</h3>
+        """
     )
 
     col11, col12, col13 = st.columns(3)
@@ -82,12 +69,9 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
 with st.expander('Example 2 - Resizing the Gauge'):
     
-    components.html(
+    st.markdown(
         """
-
-        <h3>Resizing the gauge using the preset options</h3>
-        <br><br>
-
+        ### Resizing the gauge using the preset options 
         """
     )
 
@@ -149,12 +133,9 @@ with st.expander('Example 2 - Resizing the Gauge'):
 
 with st.expander('Example 3 - Create a Gauge Title'):
 
-    components.html(
+    st.markdown(
         """
-
-        <h3>Assigning a title to the gauge using a variable</h3>
-        <br><br>
-
+        ### Assigning a title to the gauge using a variable
         """
     )
 
@@ -170,12 +151,9 @@ with st.expander('Example 3 - Create a Gauge Title'):
 
 with st.expander('Example 4 - Convert to Percentage'):
 
-    components.html(
+    st.markdown(
         """
-
-        <h3>Change the primary display value shown in the gauge using a toggle switch.</h3>
-        <br><br>
-
+        ### Change the primary display value shown in the gauge using a toggle switch.
         """
     )
 
@@ -200,11 +178,8 @@ with st.expander('Example 5 - Modify Gauge Type & Color'):
 
     st.markdown(
         """
-
-        <h3>Modifying the gauge display type using preset options and customizing the color theme.</h3>
-        <br><br>
-
-        """, unsafe_allow_html=True
+        ### Modifying the gauge display type using preset options and customizing the color theme.
+        """
     )
 
     col1, col2, col3 = st.columns(3)

@@ -13,34 +13,25 @@ def run():
         initial_sidebar_state="expanded"
     )
 
-    with st.container():
 
-        def local_css(file_name):
-            with open(file_name) as f:
-                st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+    st.write("# Plotly Indicator Gauge Demo App")
 
-        styleCSS = local_css("style/style.css")
+    st.markdown(
+        """
+            A [Streamlit](https://streamlit.io/) demonstration application for 
+            the [streamviz package](https://pypi.org/project/streamviz/) publicly 
+            available and distributed via the [Python Package Index](https://pypi.org).
+            The streamviz package helps developers quickly incorporate 
+            [Plotly](https://plotly.com/python/) gauge indicator visualizations
+            into their projects with the help of preset parameters. This application provides multiple demonstrations 
+            and interactive examples to help users become familiar with streamviz.  Additional information about 
+            the application, including source code, dependencies, tools used for development, and parameters, can 
+            be found in the [documentation](https://stream-gauge.streamlit.app/Documentation)
+            section the site.
 
-        st.write("# Plotly Indicator Gauge Demo App")
 
-        components.html(
-            """
-
-            <p style="margin-bottom:-2em;">
-                A <a href="https://streamlit.io/" target="_blank">Streamlit</a> demonstration application for 
-                the <a href="https://pypi.org/project/streamviz/" target="_blank">streamviz package</a> publicly 
-                available and distributed via the <a href="https://pypi.org" target="_blank">Python Package Index</a>.
-                The streamviz package helps developers quickly incorporate 
-                <a href="https://plotly.com/python/" target="_blank">Plotly</a> gauge indicator visualizations
-                into their projects with the help of preset parameters. This application provides multiple demonstrations 
-                and interactive examples to help users become familiar with streamviz.  Additional information about 
-                the application, including source code, dependencies, tools used for development, and parameters, can 
-                be found in the <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">documentation</a>
-                section the site.
-            </p>
-
-            """
-        )
+        """
+    )
 
     with st.container():
 

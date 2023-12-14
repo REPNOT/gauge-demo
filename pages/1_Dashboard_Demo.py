@@ -12,17 +12,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-with st.container():
-
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-    styleCSS = local_css("style/style.css")
-
 
 """
-    # Dashboard Application Demo 
+    # Dashboard Application Demo
+
     This dashboard application combines multiple [Plotly](https://plotly.com/python/) indicator gauge visualization's with several [Streamlit](https://streamlit.io/) components
     to present Annual Supply & Disposition of Electricity report data collected from the [U.S. Energy Information Administration's](https://www.eia.gov/)
     website using thier publicly available [API](https://www.eia.gov/opendata/).  The data used in this application is available
