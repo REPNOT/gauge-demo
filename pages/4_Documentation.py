@@ -31,10 +31,10 @@ with st.expander("Source Code - streamviz"):
     """
     ## streamviz
 
-        The following code is now publicly available and can be downloaded directly from the [Python Package Index](https://pypi.org/project/streamviz/) and
-        the source code is available on [GitHub](https://github.com/REPNOT/streamviz).  For more information on about using this module, please view the <a href="https://stream-gauge.streamlit.app/Video_Demo" target="_blank">Demonstration Video</a>.
+    The following code is now publicly available and can be downloaded directly from the [Python Package Index](https://pypi.org/project/streamviz/) and
+    the source code is available on [GitHub](https://github.com/REPNOT/streamviz).  For more information on about using this module, please view the [Demonstration Video](https://stream-gauge.streamlit.app/Video_Demo).
 
-        [![](https://badge.fury.io/py/streamviz.svg)](https://badge.fury.io/py/streamviz)
+    [![](https://badge.fury.io/py/streamviz.svg)](https://badge.fury.io/py/streamviz)
 
     ### Function Parameters
     """
@@ -289,11 +289,10 @@ with st.expander("Introduction Demo"):
             st.markdown(
                 \"\"\"
 
-                <h3>Adding a gauge with required value</h3>
-                <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
-                <br><br>
+                ### Adding a gauge with required value
+                [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
 
-                \"\"\", unsafe_allow_html=True
+                \"\"\"
             )
 
             col11, col12, col13 = st.columns(3)
@@ -335,9 +334,8 @@ with st.expander("Introduction Demo"):
             st.markdown(
                 \"\"\"
 
-                <h3>Resizing the gauge using the preset options</h3>
-                <a href="https://stream-gauge.streamlit.app/Documentation" target="_blank">Access streamViz Code in App Documentation</a>
-                <br><br>
+                ### Resizing the gauge using the preset options
+                [Access streamViz Code in App Documentation](https://stream-gauge.streamlit.app/Documentation)
 
                 \"\"\", unsafe_allow_html=True
             )
