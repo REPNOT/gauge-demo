@@ -807,7 +807,6 @@ with st.expander("Software & Tools Used"):
         | Github Repositories  | https://github.com/                                           |
         | Microsoft VS Code    | https://code.visualstudio.com/                                |
         | Techsmith Camtasia   | https://www.techsmith.com/video-editor.html                   |
-        | git                  | https://git-scm.com/                                          |
         | Streamlit Workspaces | https://share.streamlit.io/                                   |
         | Typedown 1.2.18.0    | https://apps.microsoft.com/detail/9P8TCW4H2HB4?hl=en-us&gl=US |
     """
