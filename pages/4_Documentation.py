@@ -789,7 +789,7 @@ with st.expander("Dependencies"):
             | --------- | -------- | ------------------------------------------------------------------ |
             | Streamlit | Python   | https://github.com/streamlit/streamlit                             |
             | Plotly    | Python   | https://github.com/plotly/plotly.py                                |
-            | pandas    | Python   | https://github.com/pandas-dev/pandas                               |
+            | Pandas    | Python   | https://github.com/pandas-dev/pandas                               |
         """
     )
 
