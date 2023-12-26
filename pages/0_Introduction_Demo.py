@@ -29,7 +29,7 @@ with st.expander('Example 1 - Calling the Gauge Function'):
 
     st.markdown(
         """
-        ### Adding a gauge with required value</h3>
+        ### Adding a gauge with required value
         """
     )
 
