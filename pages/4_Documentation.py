@@ -749,7 +749,7 @@ with st.expander("Data Files - Dashboard Demo App"):
     with col1:
         with open("data/elec_supply_dispos_org.json", "rb") as file:
             btn = st.download_button(
-                    label="Download Data - Verison 2",
+                    label="Download Data - Verison 1",
                     data=file,
                     file_name="elec_supply_dispos_org.json",
                     mime="json"
