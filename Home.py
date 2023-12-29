@@ -33,6 +33,15 @@ def run():
         """
     )
 
+    st.divider()
+
+    st.write("## Video Demonstration")
+    st.write("Implementing a guage visualization in a locally hosted Streamlit application.")
+
+    video_file = open('media/Gauge_Viz_Demo/Gauge_Viz_Demo.mp4', 'rb')
+    video_bytes = video_file.read()
+    st.video(video_bytes)
+
     with st.container():
 
         st.divider()
