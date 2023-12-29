@@ -783,16 +783,41 @@ with st.expander("Data Files - Dashboard Demo App"):
 
 with st.expander("Dependencies"):
 
-    st.markdown(
-        """
-            | Library   | Language | Link                                                               |
-            | --------- | -------- | ------------------------------------------------------------------ |
-            | Streamlit | Python   | https://github.com/streamlit/streamlit                             |
-            | Plotly    | Python   | https://github.com/plotly/plotly.py                                |
-            | Pandas    | Python   | https://github.com/pandas-dev/pandas                               |
-        """
+    depend_data = [
+        ["Streamlit", "Python", "https://github.com/streamlit/streamlit"],
+        ["Plotly", "Python", "https://github.com/plotly/plotly.py"],
+        ["Pandas", "Python", "https://github.com/pandas-dev/pandas"]
+    ]
+
+    depend_df = pd.DataFrame(
+        depend_data,
+        columns=["library", 'language', "webLink"]
     )
 
+    st.data_editor(
+            depend_df,
+            column_config={
+                "library": st.column_config.TextColumn(
+                    "Library",
+                    width="small",
+                    disabled=True
+                ),
+                "language": st.column_config.TextColumn(
+                    "Language",
+                    width="small",
+                    disabled=True
+                ),
+                "webLink": st.column_config.LinkColumn(
+                    "Web Link",
+                    help="Double click any link below to open document.",
+                    max_chars=300,
+                    width="medium",
+                    disabled=True
+                )
+            },
+            hide_index=True,
+            use_container_width=True
+        )
 
     st.write(" ")
 
@@ -800,16 +825,39 @@ with st.expander("Dependencies"):
 
 with st.expander("Software & Tools Used"):
 
-    """
-        | Product              | Link                                                          |
-        | -------------------- | ------------------------------------------------------------- |
-        | Github Codespaces    | https://github.com/features/codespaces                        |
-        | Github Repositories  | https://github.com/                                           |
-        | Microsoft VS Code    | https://code.visualstudio.com/                                |
-        | Techsmith Camtasia   | https://www.techsmith.com/video-editor.html                   |
-        | Streamlit Workspaces | https://share.streamlit.io/                                   |
-        | Typedown 1.2.18.0    | https://apps.microsoft.com/detail/9P8TCW4H2HB4?hl=en-us&gl=US |
-    """
+    tools_data = [
+        ["Github Codespaces", "https://github.com/features/codespaces"],
+        ["Github Repositories", "https://github.com/"],
+        ["Microsoft VS Code", "https://code.visualstudio.com/"],
+        ["Techsmith Camtasia", "https://www.techsmith.com/video-editor.html"],
+        ["Streamlit Workspaces", "https://share.streamlit.io/"]
+    ]
+
+    tools_df = pd.DataFrame(
+        tools_data,
+        columns=["product", "webLink"]
+    )
+
+    st.data_editor(
+            tools_df,
+            column_config={
+                "library": st.column_config.TextColumn(
+                    "Product",
+                    max_chars=300,
+                    width="medium",
+                    disabled=True
+                ),
+                "webLink": st.column_config.LinkColumn(
+                    "Web Link",
+                    help="Double click any link below to open document.",
+                    max_chars=300,
+                    width="medium",
+                    disabled=True
+                )
+            },
+            hide_index=True,
+            use_container_width=True
+        )
 
     st.write(" ")
 
