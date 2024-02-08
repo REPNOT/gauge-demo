@@ -10,9 +10,18 @@ import streamlit.components.v1 as components
 st.set_page_config(
     page_title="Stream Gauge",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
+
+with st.expander("🧭 Menu"):
+
+    st.page_link("Home.py", label="Home", icon="🏠", use_container_width=True)
+    st.page_link("pages/0_Introduction_Demo.py", label="Introduction Demo", icon="1️⃣", use_container_width=True)
+    st.page_link("pages/1_Dashboard_Demo.py", label="Dashboard Demo", icon="2️⃣", use_container_width=True)
+    st.page_link("pages/2_Interactive_Demo.py", label="Interactive Demo", icon="3️⃣", use_container_width=True)
+    st.page_link("pages/3_Automated_Demo.py", label="Automated Demo", icon="4️⃣", use_container_width=True)
+    st.page_link("pages/4_Documentation.py", label="Documentation", icon="5️⃣", use_container_width=True)
 
 """
     # Dashboard Application Demo
@@ -95,7 +104,7 @@ with col3:
     streamviz.gauge(
         gaugeVal, 
         gMode='number+gauge',
-        gTitle="Total Net Generation / Total Supply",
+        gTitle="Net Gen./Supply",
         sFix='%', gSize='FULL', 
         cWidth=True, grLow=.90, 
         grMid=.95
