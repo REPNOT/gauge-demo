@@ -13,7 +13,6 @@ def run():
         initial_sidebar_state="expanded"
     )
 
-
     st.write("# Plotly Indicator Gauge Demo App")
 
     st.markdown(
