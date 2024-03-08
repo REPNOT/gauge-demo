@@ -1,4 +1,3 @@
-from PIL import Image
 import streamlit as st
 import streamviz
 import streamlit.components.v1 as components
