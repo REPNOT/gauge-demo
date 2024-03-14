@@ -9,14 +9,17 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-menu = st.popover("🧭 Menu")
+col1, col2, col3, col4, col5 = st.columns(5)
 
-menu.page_link("Home.py", label="Home", icon="🏠", use_container_width=True)
-menu.page_link("pages/0_Introduction_Demo.py", label="Introduction Demo", icon="1️⃣", use_container_width=True)
-menu.page_link("pages/1_Dashboard_Demo.py", label="Dashboard Demo", icon="2️⃣", use_container_width=True)
-menu.page_link("pages/2_Interactive_Demo.py", label="Interactive Demo", icon="3️⃣", use_container_width=True)
-menu.page_link("pages/3_Automated_Demo.py", label="Automated Demo", icon="4️⃣", use_container_width=True)
-menu.page_link("pages/4_Documentation.py", label="Documentation", icon="5️⃣", use_container_width=True)
+with col1.expander("🧭 Menu"):
+
+    st.page_link("Home.py", label="Home", icon="🏠", use_container_width=True)
+    st.page_link("pages/0_Introduction_Demo.py", label="Introduction Demo", icon="1️⃣", use_container_width=True)
+    st.page_link("pages/1_Dashboard_Demo.py", label="Dashboard Demo", icon="2️⃣", use_container_width=True)
+    st.page_link("pages/2_Interactive_Demo.py", label="Interactive Demo", icon="3️⃣", use_container_width=True)
+    st.page_link("pages/3_Automated_Demo.py", label="Automated Demo", icon="4️⃣", use_container_width=True)
+    st.page_link("pages/4_Documentation.py", label="Documentation", icon="5️⃣", use_container_width=True)
+
 
 
 st.markdown(
