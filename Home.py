@@ -25,7 +25,7 @@ st.write("# Plotly Indicator Gauge Demo App")
 
 st.markdown(
     """
-        A [Streamlit](https://streamlit.io/) demonstration application for 
+        A [Streamlit](https://streamlit.io/) demo application for 
         the [streamviz package](https://pypi.org/project/streamviz/) publicly 
         available and distributed via the [Python Package Index](https://pypi.org).
         The streamviz package helps developers quickly incorporate 
